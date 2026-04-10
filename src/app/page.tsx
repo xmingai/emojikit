@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ComboButton } from "@/components/copy-buttons";
 import { PopularEmojiGrid } from "@/components/popular-emoji-grid";
+import { TypewriterText } from "@/components/typewriter-text";
 
 const MODULES = [
   {
@@ -69,8 +70,9 @@ export default function HomePage() {
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero */}
       <section className="text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-          Copy & Paste <span className="inline-block animate-bounce">⚡</span> Instantly
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+          <span>Copy & Paste</span>
+          <TypewriterText />
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           The fastest emoji, symbols, and fancy text tool on the web. Click to copy.
