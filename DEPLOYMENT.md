@@ -10,13 +10,22 @@
 
 ## 部署方式（二选一）
 
-### 方式 A：CLI 一键部署（推荐，当前可用）
+### 方式 A：Git Push 自动部署 ✅（推荐，已配置）
+
+GitHub 仓库已与 Vercel 项目关联。**只需 push 即可自动部署**：
 
 ```bash
-# 确保 Node 环境
-export PATH="$HOME/.nvm/versions/node/v22.22.2/bin:$PATH"
+git add -A && git commit -m "your message" && git push
+```
 
-# 部署到生产环境
+Push 后 Vercel 会自动拉取代码 → 构建 → 部署到生产环境，无需任何手动操作。
+
+### 方式 B：CLI 手动部署（备用）
+
+当需要跳过 Git 直接从本地部署时使用：
+
+```bash
+export PATH="$HOME/.nvm/versions/node/v22.22.2/bin:$PATH"
 cd /Users/sgx/Desktop/Social/Dev/emojikit
 vercel --prod --yes --archive=tgz
 ```
@@ -25,19 +34,6 @@ vercel --prod --yes --archive=tgz
 > - `--prod`：部署到生产环境（更新 emojikit-eight.vercel.app）
 > - `--yes`：跳过交互确认
 > - `--archive=tgz`：**必须加！** 将文件打包为 tgz 上传，避免 Vercel 15,000 文件上限
-
-### 方式 B：GitHub Push 自动部署（需手动配置一次）
-
-目前 Vercel 项目（`stepwisecode` 账户）和 GitHub 仓库（`xmingai` 账户）**身份不一致**，导致无法通过 CLI 自动关联。
-
-**一次性配置步骤**：
-1. 登录 https://vercel.com/truiosacer543-9368s-projects
-2. 进入 `emojikit` 项目 → **Settings** → **Git**
-3. 在 "Connected Git Repository" 区域，点击 **Connect Git Repository**
-4. 搜索并选择 `xmingai/emojikit`
-5. 保存
-
-配置成功后，以后每次 `git push` 到 `main` 分支，Vercel 就会自动触发构建部署。
 
 ---
 
