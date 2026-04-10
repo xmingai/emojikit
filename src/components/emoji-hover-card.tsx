@@ -17,7 +17,7 @@ interface EmojiHoverCardProps {
 
 export function EmojiHoverCard({ emoji, onCopy }: EmojiHoverCardProps) {
   return (
-    <HoverCard delay={200} closeDelay={150}>
+    <HoverCard>
       <HoverCardTrigger
         onClick={() => onCopy(emoji)}
         className="group relative flex items-center justify-center text-2xl sm:text-3xl p-2 rounded-lg hover:bg-muted transition-all active:scale-90 cursor-pointer"
