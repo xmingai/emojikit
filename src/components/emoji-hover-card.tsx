@@ -8,7 +8,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { Button } from "@/components/ui/button";
 
 interface EmojiHoverCardProps {
   emoji: Emoji;
@@ -28,12 +27,13 @@ export function EmojiHoverCard({ emoji, onCopy }: EmojiHoverCardProps) {
       </HoverCardTrigger>
       <HoverCardContent 
         side="top" 
-        className="w-64 p-4 shadow-xl border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+        className="w-56 p-3 shadow-xl"
       >
-        <div className="flex justify-between items-start space-x-4 mb-4">
-          <div className="space-y-1 overflow-hidden">
-            <h4 className="text-sm font-semibold capitalize truncate">{emoji.name}</h4>
-            <p className="text-xs text-muted-foreground font-mono">
+        {/* Header: emoji name + large preview */}
+        <div className="flex justify-between items-start gap-3 mb-3">
+          <div className="space-y-0.5 overflow-hidden min-w-0">
+            <h4 className="text-sm font-semibold capitalize leading-tight">{emoji.name}</h4>
+            <p className="text-[11px] text-muted-foreground font-mono">
               {emoji.unicode}
             </p>
           </div>
@@ -42,30 +42,26 @@ export function EmojiHoverCard({ emoji, onCopy }: EmojiHoverCardProps) {
           </div>
         </div>
         
+        {/* Action buttons */}
         <div className="flex gap-2">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="flex-1 cursor-copy"
+          <button 
+            className="flex-1 inline-flex items-center justify-center h-8 px-3 text-xs font-medium rounded-md border border-border bg-background hover:bg-muted transition-colors cursor-copy"
             onClick={(e) => {
               e.stopPropagation();
               onCopy(emoji);
             }}
           >
-            <Copy className="mr-2 h-3.5 w-3.5" />
+            <Copy className="mr-1.5 h-3 w-3" />
             Copy
-          </Button>
-          <Button 
-            asChild 
-            variant="default" 
-            size="sm" 
-            className="flex-1"
+          </button>
+          <Link 
+            href={`/emoji/${emoji.slug}`}
+            className="flex-1 inline-flex items-center justify-center h-8 px-3 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            onClick={(e) => e.stopPropagation()}
           >
-            <Link href={`/emoji/${emoji.slug}`}>
-              Details
-              <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-            </Link>
-          </Button>
+            Details
+            <ArrowRight className="ml-1 h-3 w-3" />
+          </Link>
         </div>
       </HoverCardContent>
     </HoverCard>
