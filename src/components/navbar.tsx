@@ -23,8 +23,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 font-semibold text-lg tracking-tight">
-          <Image src="/logo.png" alt="EmojiKit Logo" width={32} height={32} className="rounded-md" />
+        <Link href="/" className="flex items-center gap-3 font-semibold text-xl tracking-tight">
+          <Image src="/logo.png" alt="EmojiKit Logo" width={44} height={44} className="rounded-md" />
           <span>EmojiKit</span>
         </Link>
 

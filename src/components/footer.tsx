@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
-            <Image src="/logo.png" alt="EmojiKit Logo" width={24} height={24} className="rounded-sm opacity-80" />
+            <Image src="/logo.png" alt="EmojiKit Logo" width={32} height={32} className="rounded-sm opacity-80" />
             <span className="font-medium text-foreground">EmojiKit</span>
             <span>— The fastest emoji tool on the web</span>
           </div>
