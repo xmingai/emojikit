@@ -57,8 +57,7 @@ export default function HomePage() {
           Copy & Paste <span className="inline-block animate-bounce">⚡</span> Instantly
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          The fastest emoji, symbols, and fancy text tool on the web.
-          Click to copy. No sign up. No ads.
+          The fastest emoji, symbols, and fancy text tool on the web. Click to copy.
         </p>
       </section>
 
