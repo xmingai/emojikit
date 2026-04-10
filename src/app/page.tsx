@@ -6,30 +6,42 @@ const MODULES = [
   {
     href: "/emoji",
     icon: "😀",
+    bgEmojis: ["😂", "❤️", "🔥", "✨", "🎉", "💯", "🥳", "💕"],
     title: "Emoji",
     desc: "1,900+ emojis",
-    gradient: "from-amber-500/10 to-orange-500/10",
+    bg: "bg-amber-400",
+    text: "text-amber-950",
+    hoverBg: "hover:bg-amber-500",
   },
   {
     href: "/symbols",
     icon: "★",
+    bgEmojis: ["→", "♠", "©", "∞", "♫", "△", "◆", "✓"],
     title: "Symbols",
     desc: "500+ special characters",
-    gradient: "from-blue-500/10 to-cyan-500/10",
+    bg: "bg-sky-400",
+    text: "text-sky-950",
+    hoverBg: "hover:bg-sky-500",
   },
   {
     href: "/fancy-text",
     icon: "𝓐",
+    bgEmojis: ["𝔹", "ℝ", "𝕂", "𝓧", "ℂ", "ℍ", "𝕊", "𝓩"],
     title: "Fancy Text",
     desc: "20+ font styles",
-    gradient: "from-purple-500/10 to-pink-500/10",
+    bg: "bg-violet-400",
+    text: "text-violet-950",
+    hoverBg: "hover:bg-violet-500",
   },
   {
     href: "/combos",
     icon: "🎭",
+    bgEmojis: ["🎀", "☀️", "🍄", "📚", "🌊", "💔", "🌿", "🥳"],
     title: "Combos",
     desc: "100+ combinations",
-    gradient: "from-emerald-500/10 to-teal-500/10",
+    bg: "bg-emerald-400",
+    text: "text-emerald-950",
+    hoverBg: "hover:bg-emerald-500",
   },
 ];
 
@@ -62,19 +74,34 @@ export default function HomePage() {
       </section>
 
       {/* Module Cards */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
         {MODULES.map((mod) => (
           <Link
             key={mod.href}
             href={mod.href}
-            className={`group relative flex flex-col items-center gap-3 p-6 rounded-2xl border border-border/50 bg-gradient-to-br ${mod.gradient} hover:border-border hover:shadow-lg transition-all`}
+            className={`group relative overflow-hidden rounded-2xl ${mod.bg} ${mod.hoverBg} ${mod.text} transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
           >
-            <span className="text-4xl">{mod.icon}</span>
-            <div className="text-center">
-              <p className="font-semibold">{mod.title}</p>
-              <p className="text-xs text-muted-foreground">{mod.desc}</p>
+            {/* Background decorative emojis */}
+            <div className="absolute inset-0 opacity-15 select-none pointer-events-none overflow-hidden">
+              <div className="absolute -top-2 -left-2 text-5xl rotate-[-15deg]">{mod.bgEmojis[0]}</div>
+              <div className="absolute top-1 right-3 text-3xl rotate-[20deg]">{mod.bgEmojis[1]}</div>
+              <div className="absolute top-10 left-6 text-4xl rotate-[10deg]">{mod.bgEmojis[2]}</div>
+              <div className="absolute bottom-8 right-1 text-5xl rotate-[-25deg]">{mod.bgEmojis[3]}</div>
+              <div className="absolute bottom-1 left-2 text-3xl rotate-[30deg]">{mod.bgEmojis[4]}</div>
+              <div className="absolute top-16 right-8 text-2xl rotate-[-10deg]">{mod.bgEmojis[5]}</div>
+              <div className="absolute bottom-14 left-10 text-2xl rotate-[15deg]">{mod.bgEmojis[6]}</div>
+              <div className="absolute -bottom-1 right-10 text-4xl rotate-[-5deg]">{mod.bgEmojis[7]}</div>
             </div>
-            <ArrowRight className="absolute top-3 right-3 h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+            
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center p-8 pt-10 pb-6 min-h-[180px]">
+              <span className="text-6xl mb-4 drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
+                {mod.icon}
+              </span>
+              <p className="font-bold text-lg">{mod.title}</p>
+              <p className="text-sm opacity-75">{mod.desc}</p>
+              <ArrowRight className="mt-3 h-4 w-4 opacity-0 group-hover:opacity-75 translate-x-0 group-hover:translate-x-1 transition-all duration-300" />
+            </div>
           </Link>
         ))}
       </section>
