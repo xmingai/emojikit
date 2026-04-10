@@ -21,7 +21,7 @@ export function ComboButton({ name, combo }: { name: string; combo: string }) {
     >
       <div>
         <p className="text-xs text-muted-foreground mb-1">{name}</p>
-        <p className="text-2xl tracking-wide">{combo}</p>
+        <p className="text-4xl tracking-wide">{combo}</p>
       </div>
     </button>
   );
