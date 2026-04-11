@@ -29,7 +29,7 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/20 dark:border-white/10 bg-background/40 backdrop-blur-2xl backdrop-saturate-150 shadow-sm">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
         <Tooltip>
@@ -75,7 +75,7 @@ export function Navbar() {
             </button>
 
             {/* Dropdown Menu */}
-            <div className="absolute top-full right-0 mt-1 w-48 p-2 rounded-xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid gap-1">
+            <div className="absolute top-full right-0 mt-2 w-48 p-2 rounded-2xl border border-white/20 dark:border-white/10 bg-background/50 backdrop-blur-3xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(0,0,0,0.1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid gap-1">
               {MORE_LINKS.map((link) => (
                 <Link
                   key={link.href}

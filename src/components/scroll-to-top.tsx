@@ -32,7 +32,7 @@ export function ScrollToTop() {
     <Button
       variant="outline"
       size="icon"
-      className={`fixed bottom-6 right-6 z-50 rounded-full h-12 w-12 border-border/60 bg-background/80 backdrop-blur-xl shadow-lg hover:bg-muted transition-all duration-300 ${
+      className={`fixed bottom-6 right-6 z-50 rounded-full h-12 w-12 border border-white/20 dark:border-white/10 bg-background/40 backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:bg-background/60 transition-all duration-300 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
       }`}
       onClick={scrollToTop}
