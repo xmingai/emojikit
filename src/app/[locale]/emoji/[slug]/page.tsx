@@ -22,9 +22,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const emoji = getEmojiBySlug(slug);
   if (!emoji) return { title: "Emoji Not Found" };
+
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: `${emoji.emoji} ${emoji.name} Emoji — Copy & Paste`,
@@ -32,6 +34,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${emoji.emoji} ${emoji.name} Emoji`,
       description: `Copy the ${emoji.name} emoji ${emoji.emoji}. Unicode: ${emoji.unicode}`,
+    },
+    alternates: {
+      canonical: `${prefix}/emoji/${slug}`,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, l === "en" ? `/emoji/${slug}` : `/${l}/emoji/${slug}`])
+      ),
     },
   };
 }

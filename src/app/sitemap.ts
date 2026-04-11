@@ -1,25 +1,65 @@
 import { getAllEmojis } from "@/lib/emoji";
+import { locales } from "@/i18n/config";
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://mojicap.com";
+const BASE_URL = "https://www.mojicap.com";
+
+const TOOL_PATHS = [
+  { path: "/emoji", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/symbols", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/fancy-text", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/combos", changeFrequency: "weekly" as const, priority: 0.8 },
+  { path: "/kaomoji", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/dividers", changeFrequency: "monthly" as const, priority: 0.7 },
+  { path: "/invisible", changeFrequency: "monthly" as const, priority: 0.7 },
+  { path: "/braille", changeFrequency: "monthly" as const, priority: 0.7 },
+  { path: "/ascii-art", changeFrequency: "monthly" as const, priority: 0.7 },
+  { path: "/privacy", changeFrequency: "yearly" as const, priority: 0.3 },
+  { path: "/terms", changeFrequency: "yearly" as const, priority: 0.3 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const emojis = getAllEmojis();
+  const now = new Date();
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE_URL}/emoji`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/symbols`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/fancy-text`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/combos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-  ];
+  const entries: MetadataRoute.Sitemap = [];
 
-  const emojiPages: MetadataRoute.Sitemap = emojis.map((emoji) => ({
-    url: `${BASE_URL}/emoji/${emoji.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  // Homepage for each locale
+  for (const locale of locales) {
+    const prefix = locale === "en" ? "" : `/${locale}`;
+    entries.push({
+      url: `${BASE_URL}${prefix || "/"}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: locale === "en" ? 1.0 : 0.9,
+    });
+  }
 
-  return [...staticPages, ...emojiPages];
+  // Tool pages for each locale
+  for (const tool of TOOL_PATHS) {
+    for (const locale of locales) {
+      const prefix = locale === "en" ? "" : `/${locale}`;
+      entries.push({
+        url: `${BASE_URL}${prefix}${tool.path}`,
+        lastModified: now,
+        changeFrequency: tool.changeFrequency,
+        priority: locale === "en" ? tool.priority : tool.priority - 0.1,
+      });
+    }
+  }
+
+  // Emoji detail pages for each locale
+  for (const emoji of emojis) {
+    for (const locale of locales) {
+      const prefix = locale === "en" ? "" : `/${locale}`;
+      entries.push({
+        url: `${BASE_URL}${prefix}/emoji/${emoji.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: locale === "en" ? 0.6 : 0.5,
+      });
+    }
+  }
+
+  return entries;
 }

@@ -29,7 +29,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
   return {
+    metadataBase: new URL("https://www.mojicap.com"),
     title: {
       default: dict.meta.title,
       template: "%s | MojiCap",
@@ -62,6 +65,7 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
+      canonical: prefix || "/",
       languages: Object.fromEntries(
         locales.map((l) => [l, l === "en" ? "/" : `/${l}`])
       ),
