@@ -70,10 +70,10 @@ export function InvisibleClient() {
             <div className="shrink-0 flex sm:flex-col items-center justify-center gap-2 border-t sm:border-t-0 sm:border-l pt-4 sm:pt-0 sm:pl-4 border-border/50">
               <button
                 onClick={() => copyToClipboard(char.char, char.name)}
-                className="w-full sm:w-32 py-3 px-4 rounded-lg bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2"
+                className="w-full sm:w-auto py-2 px-4 rounded-lg bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2"
               >
-                <Copy className="h-4 w-4" />
-                <span>Copy Text</span>
+                <Copy className="h-3.5 w-3.5" />
+                <span>Copy</span>
               </button>
             </div>
           </div>
