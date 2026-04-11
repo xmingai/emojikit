@@ -1,51 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ComboButton } from "@/components/copy-buttons";
 import { PopularEmojiGrid } from "@/components/popular-emoji-grid";
 import { TypewriterText } from "@/components/typewriter-text";
+import type { Dictionary } from "@/i18n/dictionaries";
+import type { Locale } from "@/i18n/config";
 
-const MODULES = [
-  {
-    href: "/emoji",
-    icon: "😀",
-    bgEmojis: ["😂", "❤️", "🔥", "✨", "🎉", "💯", "🥳", "💕"],
-    title: "Emoji",
-    desc: "1,900+ emojis",
-    bg: "bg-amber-400",
-    text: "text-amber-950",
-    hoverBg: "hover:bg-amber-500",
-  },
-  {
-    href: "/symbols",
-    icon: "★",
-    bgEmojis: ["→", "♠", "©", "∞", "♫", "△", "◆", "✓"],
-    title: "Symbols",
-    desc: "500+ special characters",
-    bg: "bg-sky-400",
-    text: "text-sky-950",
-    hoverBg: "hover:bg-sky-500",
-  },
-  {
-    href: "/fancy-text",
-    icon: "𝓐",
-    bgEmojis: ["𝔹", "ℝ", "𝕂", "𝓧", "ℂ", "ℍ", "𝕊", "𝓩"],
-    title: "Fancy Text",
-    desc: "20+ font styles",
-    bg: "bg-violet-400",
-    text: "text-violet-950",
-    hoverBg: "hover:bg-violet-500",
-  },
-  {
-    href: "/combos",
-    icon: "🎭",
-    bgEmojis: ["🎀", "☀️", "🍄", "📚", "🌊", "💔", "🌿", "🥳"],
-    title: "Combos",
-    desc: "100+ combinations",
-    bg: "bg-emerald-400",
-    text: "text-emerald-950",
-    hoverBg: "hover:bg-emerald-500",
-  },
-];
+interface HomeClientProps {
+  dict: Dictionary;
+  locale: Locale;
+}
 
 const POPULAR_EMOJIS = [
   "😂", "❤️", "🤣", "👍", "😭", "🙏", "😘", "🥰", "😍", "😊",
@@ -74,7 +40,7 @@ const PREVIEW_KAOMOJI = [
 
 const PREVIEW_DIVIDERS = [
   { name: "Stars", text: "────── ⋆⋅☆⋅⋆ ──────" },
-  { name: "Flowers", text: "⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆" },
+  { name: "Flowers", text: "⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆" },
 ];
 
 const PREVIEW_ASCII_ART = [
@@ -82,17 +48,63 @@ const PREVIEW_ASCII_ART = [
   { name: "Spider", text: "/╲/\\╭ºoº╮/\\╱\\" },
 ];
 
-export default function HomePage() {
+export function HomeClient({ dict, locale }: HomeClientProps) {
+  const t = dict.home;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
+  const MODULES = [
+    {
+      href: `${prefix}/emoji`,
+      icon: "😀",
+      bgEmojis: ["😂", "❤️", "🔥", "✨", "🎉", "💯", "🥳", "💕"],
+      title: t.moduleEmoji,
+      desc: t.moduleEmojiDesc,
+      bg: "bg-amber-400",
+      text: "text-amber-950",
+      hoverBg: "hover:bg-amber-500",
+    },
+    {
+      href: `${prefix}/symbols`,
+      icon: "★",
+      bgEmojis: ["→", "♠", "©", "∞", "♫", "△", "◆", "✓"],
+      title: t.moduleSymbols,
+      desc: t.moduleSymbolsDesc,
+      bg: "bg-sky-400",
+      text: "text-sky-950",
+      hoverBg: "hover:bg-sky-500",
+    },
+    {
+      href: `${prefix}/fancy-text`,
+      icon: "𝓐",
+      bgEmojis: ["𝔹", "ℝ", "𝕂", "𝓧", "ℂ", "ℍ", "𝕊", "𝓩"],
+      title: t.moduleFancyText,
+      desc: t.moduleFancyTextDesc,
+      bg: "bg-violet-400",
+      text: "text-violet-950",
+      hoverBg: "hover:bg-violet-500",
+    },
+    {
+      href: `${prefix}/combos`,
+      icon: "🎭",
+      bgEmojis: ["🎀", "☀️", "🍄", "📚", "🌊", "💔", "🌿", "🥳"],
+      title: t.moduleCombos,
+      desc: t.moduleCombosDesc,
+      bg: "bg-emerald-400",
+      text: "text-emerald-950",
+      hoverBg: "hover:bg-emerald-500",
+    },
+  ];
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero */}
       <section className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-          <span>Copy & Paste</span>
+          <span>{t.heroTitle}</span>
           <TypewriterText />
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          The fastest emoji, symbols, and fancy text tool on the web.
+          {t.heroSubtitle}
         </p>
       </section>
 
@@ -104,7 +116,6 @@ export default function HomePage() {
             href={mod.href}
             className={`group relative overflow-hidden rounded-2xl ${mod.bg} ${mod.hoverBg} ${mod.text} transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
           >
-            {/* Background decorative emojis */}
             <div className="absolute inset-0 opacity-15 select-none pointer-events-none overflow-hidden">
               <div className="absolute -top-2 -left-2 text-5xl rotate-[-15deg]">{mod.bgEmojis[0]}</div>
               <div className="absolute top-1 right-3 text-3xl rotate-[20deg]">{mod.bgEmojis[1]}</div>
@@ -115,8 +126,6 @@ export default function HomePage() {
               <div className="absolute bottom-14 left-10 text-2xl rotate-[15deg]">{mod.bgEmojis[6]}</div>
               <div className="absolute -bottom-1 right-10 text-4xl rotate-[-5deg]">{mod.bgEmojis[7]}</div>
             </div>
-            
-            {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center p-8 pt-10 pb-6 min-h-[180px]">
               <span className="text-6xl mb-4 drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
                 {mod.icon}
@@ -132,12 +141,12 @@ export default function HomePage() {
       {/* Popular Emojis */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Popular Emojis</h2>
+          <h2 className="text-xl font-semibold">{t.popularEmojis}</h2>
           <Link
-            href="/emoji"
+            href={`${prefix}/emoji`}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            View all <ArrowRight className="h-3 w-3" />
+            {t.viewAll} <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
         <PopularEmojiGrid emojis={POPULAR_EMOJIS} />
@@ -146,12 +155,12 @@ export default function HomePage() {
       {/* Trending Combos Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Trending Combos</h2>
+          <h2 className="text-xl font-semibold">{t.trendingCombos}</h2>
           <Link
-            href="/combos"
+            href={`${prefix}/combos`}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            View all <ArrowRight className="h-3 w-3" />
+            {t.viewAll} <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -164,12 +173,12 @@ export default function HomePage() {
       {/* Kaomoji Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Popular Kaomoji</h2>
+          <h2 className="text-xl font-semibold">{t.popularKaomoji}</h2>
           <Link
-            href="/kaomoji"
+            href={`${prefix}/kaomoji`}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            View all <ArrowRight className="h-3 w-3" />
+            {t.viewAll} <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -182,12 +191,12 @@ export default function HomePage() {
       {/* Dividers Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Aesthetic Dividers</h2>
+          <h2 className="text-xl font-semibold">{t.aestheticDividers}</h2>
           <Link
-            href="/dividers"
+            href={`${prefix}/dividers`}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            View all <ArrowRight className="h-3 w-3" />
+            {t.viewAll} <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -200,12 +209,12 @@ export default function HomePage() {
       {/* ASCII Art Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">One-Line ASCII Art</h2>
+          <h2 className="text-xl font-semibold">{t.oneLineAsciiArt}</h2>
           <Link
-            href="/ascii-art"
+            href={`${prefix}/ascii-art`}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            View all <ArrowRight className="h-3 w-3" />
+            {t.viewAll} <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -215,23 +224,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Utility Preview (Invisible & Braille) */}
+      {/* Utility Preview */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Invisible Characters</h2>
-            <Link href="/invisible" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
-              View all <ArrowRight className="h-3 w-3" />
+            <h2 className="text-xl font-semibold">{t.invisibleCharacters}</h2>
+            <Link href={`${prefix}/invisible`} className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+              {t.viewAll} <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
           <ComboButton name="Zero Width Space (ZWSP)" combo="[​]" />
-          <p className="text-xs text-muted-foreground mt-2 px-1">Use to bypass filters or create blank names in games.</p>
+          <p className="text-xs text-muted-foreground mt-2 px-1">{t.invisibleHint}</p>
         </div>
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Braille Translator</h2>
-            <Link href="/braille" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
-              Try it <ArrowRight className="h-3 w-3" />
+            <h2 className="text-xl font-semibold">{t.brailleTranslator}</h2>
+            <Link href={`${prefix}/braille`} className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+              {t.tryIt} <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
           <ComboButton name="Hello World" combo="⠓⠑⠇⠇⠕⠀⠺⠕⠗⠇⠙" />

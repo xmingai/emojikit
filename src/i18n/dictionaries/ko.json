@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "EmojiKit — 이모지, 특수문자 & 꾸미기 글꼴 복사 붙여넣기",
+    "description": "웹에서 가장 빠르고 아름다운 이모지 도구. 이모지, 특수문자, 꾸미기 글꼴, 이모지 조합을 즉시 복사 붙여넣기."
+  },
+  "nav": {
+    "emoji": "이모지",
+    "symbols": "특수문자",
+    "fonts": "글꼴",
+    "combos": "조합",
+    "kaomoji": "이모티콘",
+    "lines": "구분선",
+    "invisible": "투명문자",
+    "braille": "점자",
+    "art": "아트",
+    "more": "더보기",
+    "toggleTheme": "테마 전환",
+    "bookmarkTip": "또는 북마크 바로 드래그하여 저장 ✨"
+  },
+  "home": {
+    "heroTitle": "복사 & 붙여넣기",
+    "heroSubtitle": "웹에서 가장 빠른 이모지, 특수문자, 꾸미기 글꼴 도구.",
+    "moduleEmoji": "이모지",
+    "moduleEmojiDesc": "3,700+ 이모지",
+    "moduleSymbols": "특수문자",
+    "moduleSymbolsDesc": "1,800+ 특수문자",
+    "moduleFancyText": "꾸미기 글꼴",
+    "moduleFancyTextDesc": "20+ 글꼴 스타일",
+    "moduleCombos": "조합",
+    "moduleCombosDesc": "1,100+ 조합",
+    "popularEmojis": "인기 이모지",
+    "trendingCombos": "인기 조합",
+    "popularKaomoji": "인기 이모티콘",
+    "aestheticDividers": "감성 구분선",
+    "oneLineAsciiArt": "한줄 아스키 아트",
+    "invisibleCharacters": "투명 문자",
+    "brailleTranslator": "점자 변환기",
+    "viewAll": "전체 보기",
+    "tryIt": "사용해보기",
+    "invisibleHint": "필터 우회나 게임에서 빈 이름 만들기에 사용."
+  },
+  "emoji": {
+    "title": "이모지 복사 & 붙여넣기",
+    "metaTitle": "이모지 복사 붙여넣기 — 3,700+ 전체 이모지 (Unicode 16.0)",
+    "metaDesc": "피부색 변형을 포함한 3,700+ 이모지를 탐색하고 복사하세요. Unicode 16.0 완벽 지원.",
+    "clickToCopy": "이모지를 클릭하면 클립보드에 복사됩니다.",
+    "emojisAvailable": "{count}개 이모지 사용 가능 (Unicode 16.0).",
+    "searchPlaceholder": "이모지 검색... (예: 웃음, 하트, 불)",
+    "byCategory": "카테고리별",
+    "byVersion": "버전 / 연도별",
+    "shown": "표시됨",
+    "allVersions": "모든 버전",
+    "emojiIntro": "개 이모지가 이 버전에서 도입됨",
+    "recentlyUsed": "최근 사용",
+    "noResults": "검색 결과 없음",
+    "category": "카테고리",
+    "unicode": "유니코드",
+    "shortcode": "단축코드",
+    "skinToneSupport": "피부색 지원",
+    "skinToneYes": "✅ 지원",
+    "skinToneNo": "❌ 미지원",
+    "emojiVersion": "이모지 버전",
+    "subgroup": "하위 카테고리",
+    "keywords": "키워드",
+    "skinToneVariants": "피부색 변형",
+    "relatedEmojis": "관련 이모지",
+    "allEmojis": "모든 이모지",
+    "copyEmoji": "이모지 복사",
+    "copied": "복사됨!"
+  },
+  "symbols": {
+    "title": "특수문자 & 기호",
+    "metaTitle": "특수문자 — 1,800+ 유니코드 기호 복사 붙여넣기",
+    "metaDesc": "화살표, 별, 수학 기호 등 1,800+ 특수문자를 복사 붙여넣기.",
+    "clickToCopy": "기호를 클릭하면 복사됩니다.",
+    "searchPlaceholder": "기호 검색..."
+  },
+  "fancyText": {
+    "title": "꾸미기 글꼴 생성기",
+    "metaTitle": "꾸미기 글꼴 — 20+ 쿨한 글꼴 스타일",
+    "metaDesc": "텍스트를 꾸미기 글꼴로 변환. 필기체, 굵게, 기울임 등 20+ 스타일."
+  },
+  "combos": {
+    "title": "이모지 조합",
+    "metaTitle": "이모지 조합 — 1,100+ 복사 붙여넣기 조합",
+    "metaDesc": "프로필, 게시물, 메시지용 1,100+ 이모지 조합을 탐색하고 복사하세요.",
+    "clickToCopy": "클릭하여 조합 복사.",
+    "searchPlaceholder": "조합 검색..."
+  },
+  "kaomoji": {
+    "title": "이모티콘 & 카오모지",
+    "metaTitle": "이모티콘 — 2,000+ 카오모지 복사 붙여넣기",
+    "metaDesc": "2,000+ 카오모지와 일본식 이모티콘을 탐색하고 복사하세요.",
+    "clickToCopy": "클릭하여 이모티콘 복사.",
+    "searchPlaceholder": "이모티콘 검색..."
+  },
+  "dividers": {
+    "title": "텍스트 구분선 & 라인 아트"
+  },
+  "invisible": {
+    "title": "투명 문자"
+  },
+  "braille": {
+    "title": "점자 변환기"
+  },
+  "asciiArt": {
+    "title": "아스키 아트"
+  },
+  "footer": {
+    "description": "웹에서 가장 빠르고 아름다운 이모지 도구. 이모지, 특수문자, 텍스트 아트를 즉시 복사.",
+    "tools": "도구",
+    "moreTools": "기타 도구",
+    "emojiCopyPaste": "🔥 이모지 복사 붙여넣기",
+    "specialSymbols": "★ 특수문자",
+    "fancyTextGenerator": "𝓐 꾸미기 글꼴 생성기",
+    "emojiCombos": "🎭 이모지 조합",
+    "kaomojiEmoticons": "(·ω·) 이모티콘",
+    "textDividers": "─── 텍스트 구분선",
+    "invisibleCharacters": "⠀ 투명 문자",
+    "brailleTranslator": "⠓ 점자 변환기",
+    "asciiArt": "╱╲ 아스키 아트",
+    "copyright": "© {year} EmojiKit. 모든 이모지의 저작권은 각 소유자에게 있습니다.",
+    "privacy": "개인정보",
+    "terms": "이용약관"
+  },
+  "common": {
+    "copied": "{text} 복사됨",
+    "copyToClipboard": "클립보드에 복사",
+    "search": "검색",
+    "all": "전체"
+  }
+}

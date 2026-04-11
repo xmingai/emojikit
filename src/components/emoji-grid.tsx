@@ -12,6 +12,7 @@ import { useRecent } from "@/hooks/use-recent";
 import { EmojiHoverCard } from "@/components/emoji-hover-card";
 import { SizeSlider, COMMON_SIZE_PRESETS } from "@/components/size-slider";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/i18n/context";
 
 interface EmojiGridProps {
   emojis: Emoji[];       // base emojis (no skin variants)
@@ -29,8 +30,10 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
   const [viewMode, setViewMode] = useState<ViewMode>("category");
   const [selected, setSelected] = useState<string[]>([]);
   const { recent, addRecent } = useRecent();
-  const [sizeIndex, setSizeIndex] = useState(2); // Default to L
+  const [sizeIndex, setSizeIndex] = useState(2);
   const currentSize = COMMON_SIZE_PRESETS[sizeIndex];
+  const dict = useDict();
+  const t = dict.emoji;
 
   const filteredEmojis = useMemo(() => {
     if (searchQuery) {
@@ -67,9 +70,9 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold mb-1">Emoji Copy & Paste</h1>
+          <h1 className="text-2xl font-bold mb-1">{t.title}</h1>
           <p className="text-sm text-muted-foreground">
-            Click any emoji to copy it to your clipboard. {allEmojis.length.toLocaleString()} emojis available (Unicode 16.0).
+            {t.clickToCopy} {t.emojisAvailable.replace("{count}", allEmojis.length.toLocaleString())}
           </p>
         </div>
         <div className="shrink-0 mt-2 sm:mt-0">
@@ -86,7 +89,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
             setActiveVersion(null);
           }
         }}
-        placeholder="Search emojis... (e.g. fire, heart, smile)"
+        placeholder={t.searchPlaceholder}
       />
 
       {/* View Mode Toggle */}
@@ -105,7 +108,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
-              By Category
+              {t.byCategory}
             </button>
             <button
               onClick={() => {
@@ -119,11 +122,11 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
-              By Version / Era
+              {t.byVersion}
             </button>
           </div>
           <span className="text-xs text-muted-foreground ml-2">
-            {filteredEmojis.length.toLocaleString()} shown
+            {filteredEmojis.length.toLocaleString()} {t.shown}
           </span>
         </div>
       )}
@@ -153,7 +156,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >
-              All Versions
+              {t.allVersions}
             </button>
             {versions.map((v) => (
               <button
@@ -183,7 +186,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
                     Emoji {activeVersion} · {versions.find((v) => v.version === activeVersion)?.year}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {versions.find((v) => v.version === activeVersion)?.count} emojis introduced in this version
+                    {versions.find((v) => v.version === activeVersion)?.count} {t.emojiIntro}
                   </p>
                 </div>
               </div>
@@ -196,7 +199,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
       {!searchQuery && viewMode === "category" && !activeCategory && recent.length > 0 && (
         <div className="space-y-2">
           <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-            Recently Used
+            {t.recentlyUsed}
           </h3>
           <div className="flex flex-wrap gap-1">
             {recent.slice(0, 20).map((emoji, i) => (
@@ -232,7 +235,7 @@ export function EmojiGrid({ emojis, allEmojis, categories, versions }: EmojiGrid
       {filteredEmojis.length === 0 && (
         <div className="text-center py-16 text-muted-foreground">
           <p className="text-4xl mb-3">🔍</p>
-          <p className="text-sm">No emojis found for &quot;{searchQuery}&quot;</p>
+          <p className="text-sm">{t.noResults} &quot;{searchQuery}&quot;</p>
         </div>
       )}
 

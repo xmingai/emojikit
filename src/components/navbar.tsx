@@ -2,31 +2,74 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import { Sun, Moon, Search } from "lucide-react";
+import { Sun, Moon, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-
-const MAIN_LINKS = [
-  { href: "/emoji", label: "Emoji", icon: "😀" },
-  { href: "/symbols", label: "Symbols", icon: "★" },
-  { href: "/fancy-text", label: "Fonts", icon: "𝓐" },
-  { href: "/combos", label: "Combos", icon: "🎭" },
-];
-
-const MORE_LINKS = [
-  { href: "/kaomoji", label: "Kaomoji", icon: "(·ω·)" },
-  { href: "/dividers", label: "Lines", icon: "───" },
-  { href: "/invisible", label: "Invisible", icon: "⠀" },
-  { href: "/braille", label: "Braille", icon: "⠓" },
-  { href: "/ascii-art", label: "Art", icon: "╱╲" },
-];
+import { useDict, useLocale } from "@/i18n/context";
+import { locales, localeNames, localeFlags, defaultLocale, type Locale } from "@/i18n/config";
+import { useState, useRef, useEffect } from "react";
 
 export function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, setTheme } = useTheme();
+  const dict = useDict();
+  const locale = useLocale();
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  const prefix = locale === defaultLocale ? "" : `/${locale}`;
+
+  const MAIN_LINKS = [
+    { href: `${prefix}/emoji`, label: dict.nav.emoji, icon: "😀" },
+    { href: `${prefix}/symbols`, label: dict.nav.symbols, icon: "★" },
+    { href: `${prefix}/fancy-text`, label: dict.nav.fonts, icon: "𝓐" },
+    { href: `${prefix}/combos`, label: dict.nav.combos, icon: "🎭" },
+  ];
+
+  const MORE_LINKS = [
+    { href: `${prefix}/kaomoji`, label: dict.nav.kaomoji, icon: "(·ω·)" },
+    { href: `${prefix}/dividers`, label: dict.nav.lines, icon: "───" },
+    { href: `${prefix}/invisible`, label: dict.nav.invisible, icon: "⠀" },
+    { href: `${prefix}/braille`, label: dict.nav.braille, icon: "⠓" },
+    { href: `${prefix}/ascii-art`, label: dict.nav.art, icon: "╱╲" },
+  ];
+
+  // Close language dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function switchLocale(newLocale: Locale) {
+    // Remove current locale prefix, add new one
+    let path = pathname;
+    // Strip current locale prefix
+    for (const l of locales) {
+      if (path.startsWith(`/${l}/`)) {
+        path = path.slice(`/${l}`.length);
+        break;
+      }
+      if (path === `/${l}`) {
+        path = "/";
+        break;
+      }
+    }
+    const newPath = newLocale === defaultLocale ? (path || "/") : `/${newLocale}${path || "/"}`;
+
+    // Set cookie for middleware
+    document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=31536000`;
+    setLangOpen(false);
+    router.push(newPath);
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/20 dark:border-white/10 bg-background/40 backdrop-blur-2xl backdrop-saturate-150 shadow-sm">
@@ -34,13 +77,13 @@ export function Navbar() {
         {/* Logo */}
         <Tooltip>
           <TooltipTrigger className="cursor-pointer" render={<div />}>
-            <Link href="/" className="flex items-center gap-3 font-semibold text-xl tracking-tight">
+            <Link href={prefix || "/"} className="flex items-center gap-3 font-semibold text-xl tracking-tight">
               <Image src="/logo.png" alt="EmojiKit Logo" width={44} height={44} className="rounded-md" />
               <span>EmojiKit</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent side="bottom" sideOffset={14}>
-            <p className="flex items-center gap-1.5"><span className="text-[10px] px-1 py-0.5 bg-background text-foreground rounded">Cmd/Ctrl + D</span> or drag to Bookmarks to save ✨</p>
+            <p className="flex items-center gap-1.5"><span className="text-[10px] px-1 py-0.5 bg-background text-foreground rounded">Cmd/Ctrl + D</span>{dict.nav.bookmarkTip}</p>
           </TooltipContent>
         </Tooltip>
 
@@ -71,10 +114,9 @@ export function Navbar() {
                 : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
             )}>
               <span>•••</span>
-              <span>More</span>
+              <span>{dict.nav.more}</span>
             </button>
 
-            {/* Dropdown Menu */}
             <div className="absolute top-full right-0 mt-2 w-48 p-2 rounded-2xl border border-white/20 dark:border-white/10 bg-background/50 backdrop-blur-3xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(0,0,0,0.1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid gap-1">
               {MORE_LINKS.map((link) => (
                 <Link
@@ -95,6 +137,40 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
+          {/* Language Switcher */}
+          <div className="relative" ref={langRef}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setLangOpen(!langOpen)}
+              className="h-8 w-8"
+              title="Language"
+            >
+              <Globe className="h-4 w-4" />
+            </Button>
+
+            {langOpen && (
+              <div className="absolute top-full right-0 mt-2 w-44 p-1.5 rounded-xl border border-white/20 dark:border-white/10 bg-background/80 backdrop-blur-3xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(0,0,0,0.12)] z-50">
+                {locales.map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => switchLocale(l)}
+                    className={cn(
+                      "w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors",
+                      locale === l
+                        ? "bg-foreground/10 text-foreground font-medium"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    )}
+                  >
+                    <span>{localeFlags[l]}</span>
+                    <span>{localeNames[l]}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Theme Toggle */}
           <Button
             variant="ghost"
             size="icon"
@@ -103,7 +179,7 @@ export function Navbar() {
           >
             <Sun className="h-4 w-4 rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
+            <span className="sr-only">{dict.nav.toggleTheme}</span>
           </Button>
         </div>
       </div>

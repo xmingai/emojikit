@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "EmojiKit — 表情符号、特殊符号 & 花体文字 一键复制",
+    "description": "全网最快最美的 Emoji 工具。一键复制粘贴表情符号、特殊符号、花体文字和 Emoji 组合。"
+  },
+  "nav": {
+    "emoji": "表情",
+    "symbols": "符号",
+    "fonts": "花字",
+    "combos": "组合",
+    "kaomoji": "颜文字",
+    "lines": "分割线",
+    "invisible": "隐形字",
+    "braille": "盲文",
+    "art": "字符画",
+    "more": "更多",
+    "toggleTheme": "切换主题",
+    "bookmarkTip": "或拖到书签栏收藏 ✨"
+  },
+  "home": {
+    "heroTitle": "一键复制粘贴",
+    "heroSubtitle": "全网最快的 Emoji、特殊符号和花体文字工具。",
+    "moduleEmoji": "表情符号",
+    "moduleEmojiDesc": "3,700+ 个表情",
+    "moduleSymbols": "特殊符号",
+    "moduleSymbolsDesc": "1,800+ 个特殊字符",
+    "moduleFancyText": "花体文字",
+    "moduleFancyTextDesc": "20+ 种字体风格",
+    "moduleCombos": "Emoji 组合",
+    "moduleCombosDesc": "1,100+ 种组合",
+    "popularEmojis": "热门表情",
+    "trendingCombos": "热门组合",
+    "popularKaomoji": "热门颜文字",
+    "aestheticDividers": "装饰分割线",
+    "oneLineAsciiArt": "单行字符画",
+    "invisibleCharacters": "隐形字符",
+    "brailleTranslator": "盲文翻译器",
+    "viewAll": "查看全部",
+    "tryIt": "试一试",
+    "invisibleHint": "用于绕过过滤器或在游戏中创建空白名称。"
+  },
+  "emoji": {
+    "title": "表情符号 一键复制",
+    "metaTitle": "Emoji 复制粘贴 — 全部 3,700+ 表情符号 (Unicode 16.0)",
+    "metaDesc": "浏览并复制全部 3,700+ 个表情符号，包含肤色变体。完整支持 Unicode 16.0。",
+    "clickToCopy": "点击任意表情即可复制到剪贴板。",
+    "emojisAvailable": "共 {count} 个表情可用 (Unicode 16.0)。",
+    "searchPlaceholder": "搜索表情... (如 笑脸、爱心、火)",
+    "byCategory": "按分类",
+    "byVersion": "按版本 / 年代",
+    "shown": "已显示",
+    "allVersions": "所有版本",
+    "emojiIntro": "个表情在该版本首次引入",
+    "recentlyUsed": "最近使用",
+    "noResults": "未找到相关表情",
+    "category": "分类",
+    "unicode": "Unicode 编码",
+    "shortcode": "短代码",
+    "skinToneSupport": "肤色支持",
+    "skinToneYes": "✅ 支持",
+    "skinToneNo": "❌ 不支持",
+    "emojiVersion": "Emoji 版本",
+    "subgroup": "子分类",
+    "keywords": "关键词",
+    "skinToneVariants": "肤色变体",
+    "relatedEmojis": "相关表情",
+    "allEmojis": "全部表情",
+    "copyEmoji": "复制表情",
+    "copied": "已复制！"
+  },
+  "symbols": {
+    "title": "特殊符号 & 字符",
+    "metaTitle": "特殊符号 — 复制粘贴 1,800+ Unicode 符号",
+    "metaDesc": "复制粘贴 1,800+ 个特殊符号，包括箭头、星星、数学符号等。",
+    "clickToCopy": "点击任意符号即可复制。",
+    "searchPlaceholder": "搜索符号..."
+  },
+  "fancyText": {
+    "title": "花体文字生成器",
+    "metaTitle": "花体文字生成器 — 20+ 种酷炫字体风格",
+    "metaDesc": "将文字转换为花体字。提供 20+ 种风格，包括手写体、粗体、斜体等。"
+  },
+  "combos": {
+    "title": "Emoji 组合",
+    "metaTitle": "Emoji 组合 — 1,100+ 种一键复制",
+    "metaDesc": "浏览并复制 1,100+ 种 Emoji 组合，适用于个签、朋友圈和消息。",
+    "clickToCopy": "点击即可复制组合。",
+    "searchPlaceholder": "搜索组合..."
+  },
+  "kaomoji": {
+    "title": "颜文字 & 日式表情",
+    "metaTitle": "颜文字 — 2,000+ 个日式表情一键复制",
+    "metaDesc": "浏览并复制 2,000+ 个颜文字和日式表情符号。",
+    "clickToCopy": "点击即可复制颜文字。",
+    "searchPlaceholder": "搜索颜文字..."
+  },
+  "dividers": {
+    "title": "文字分割线 & 线条艺术"
+  },
+  "invisible": {
+    "title": "隐形字符"
+  },
+  "braille": {
+    "title": "盲文翻译器"
+  },
+  "asciiArt": {
+    "title": "ASCII 字符画"
+  },
+  "footer": {
+    "description": "全网最快最美的 Emoji 工具。一键复制表情符号、特殊符号和字符画。",
+    "tools": "工具",
+    "moreTools": "更多工具",
+    "emojiCopyPaste": "🔥 表情复制粘贴",
+    "specialSymbols": "★ 特殊符号",
+    "fancyTextGenerator": "𝓐 花体文字生成器",
+    "emojiCombos": "🎭 Emoji 组合",
+    "kaomojiEmoticons": "(·ω·) 颜文字",
+    "textDividers": "─── 文字分割线",
+    "invisibleCharacters": "⠀ 隐形字符",
+    "brailleTranslator": "⠓ 盲文翻译器",
+    "asciiArt": "╱╲ ASCII 字符画",
+    "copyright": "© {year} EmojiKit. 所有表情符号版权归其各自所有者所有。",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
+  },
+  "common": {
+    "copied": "已复制 {text}",
+    "copyToClipboard": "复制到剪贴板",
+    "search": "搜索",
+    "all": "全部"
+  }
+}

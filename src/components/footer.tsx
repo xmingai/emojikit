@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
+import { useDict, useLocale } from "@/i18n/context";
+import { defaultLocale } from "@/i18n/config";
 
 export function Footer() {
+  const dict = useDict();
+  const locale = useLocale();
+  const t = dict.footer;
+  const prefix = locale === defaultLocale ? "" : `/${locale}`;
+
   return (
     <footer className="mt-auto border-t border-border/40">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -12,28 +21,28 @@ export function Footer() {
               <Image src="/logo.png" alt="EmojiKit Logo" width={32} height={32} className="rounded-sm opacity-80" />
               <span className="font-semibold text-lg text-foreground">EmojiKit</span>
             </div>
-            <p className="text-sm text-muted-foreground">The fastest and most beautiful emoji tool on the web. Instantly copy emojis, symbols, and text art.</p>
+            <p className="text-sm text-muted-foreground">{t.description}</p>
           </div>
 
           <div className="flex gap-12 sm:gap-24">
           <div className="space-y-3">
-            <h4 className="font-semibold text-foreground">Tools</h4>
+            <h4 className="font-semibold text-foreground">{t.tools}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/emoji" className="hover:text-foreground hover:underline transition-colors">🔥 Emoji Copy & Paste</Link></li>
-              <li><Link href="/symbols" className="hover:text-foreground hover:underline transition-colors">★ Special Symbols</Link></li>
-              <li><Link href="/fancy-text" className="hover:text-foreground hover:underline transition-colors">𝓐 Fancy Text Generator</Link></li>
-              <li><Link href="/combos" className="hover:text-foreground hover:underline transition-colors">🎭 Emoji Combos</Link></li>
-              <li><Link href="/kaomoji" className="hover:text-foreground hover:underline transition-colors">(·ω·) Kaomoji / Emoticons</Link></li>
+              <li><Link href={`${prefix}/emoji`} className="hover:text-foreground hover:underline transition-colors">{t.emojiCopyPaste}</Link></li>
+              <li><Link href={`${prefix}/symbols`} className="hover:text-foreground hover:underline transition-colors">{t.specialSymbols}</Link></li>
+              <li><Link href={`${prefix}/fancy-text`} className="hover:text-foreground hover:underline transition-colors">{t.fancyTextGenerator}</Link></li>
+              <li><Link href={`${prefix}/combos`} className="hover:text-foreground hover:underline transition-colors">{t.emojiCombos}</Link></li>
+              <li><Link href={`${prefix}/kaomoji`} className="hover:text-foreground hover:underline transition-colors">{t.kaomojiEmoticons}</Link></li>
             </ul>
           </div>
           
           <div className="space-y-3">
-            <h4 className="font-semibold text-foreground">More Tools</h4>
+            <h4 className="font-semibold text-foreground">{t.moreTools}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/dividers" className="hover:text-foreground hover:underline transition-colors">─── Text Dividers</Link></li>
-              <li><Link href="/invisible" className="hover:text-foreground hover:underline transition-colors">⠀ Invisible Characters</Link></li>
-              <li><Link href="/braille" className="hover:text-foreground hover:underline transition-colors">⠓ Braille Translator</Link></li>
-              <li><Link href="/ascii-art" className="hover:text-foreground hover:underline transition-colors">╱╲ ASCII Art</Link></li>
+              <li><Link href={`${prefix}/dividers`} className="hover:text-foreground hover:underline transition-colors">{t.textDividers}</Link></li>
+              <li><Link href={`${prefix}/invisible`} className="hover:text-foreground hover:underline transition-colors">{t.invisibleCharacters}</Link></li>
+              <li><Link href={`${prefix}/braille`} className="hover:text-foreground hover:underline transition-colors">{t.brailleTranslator}</Link></li>
+              <li><Link href={`${prefix}/ascii-art`} className="hover:text-foreground hover:underline transition-colors">{t.asciiArt}</Link></li>
             </ul>
           </div>
           </div>
@@ -42,13 +51,13 @@ export function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} EmojiKit. All emoji copyrights belong to their respective owners.</p>
+          <p>{t.copyright.replace("{year}", new Date().getFullYear().toString())}</p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
-              Privacy
+            <Link href={`${prefix}/privacy`} className="hover:text-foreground transition-colors">
+              {t.privacy}
             </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
-              Terms
+            <Link href={`${prefix}/terms`} className="hover:text-foreground transition-colors">
+              {t.terms}
             </Link>
           </div>
         </div>

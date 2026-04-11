@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "EmojiKit — 絵文字・記号 & おしゃれフォント コピペ",
+    "description": "ウェブ上で最速・最美の絵文字ツール。絵文字、特殊記号、おしゃれフォント、絵文字コンボを瞬時にコピー＆ペースト。"
+  },
+  "nav": {
+    "emoji": "絵文字",
+    "symbols": "記号",
+    "fonts": "フォント",
+    "combos": "コンボ",
+    "kaomoji": "顔文字",
+    "lines": "区切り線",
+    "invisible": "透明文字",
+    "braille": "点字",
+    "art": "AA",
+    "more": "もっと",
+    "toggleTheme": "テーマ切替",
+    "bookmarkTip": "またはブックマークにドラッグして保存 ✨"
+  },
+  "home": {
+    "heroTitle": "コピー＆ペースト",
+    "heroSubtitle": "ウェブ上で最速の絵文字・記号・おしゃれフォントツール。",
+    "moduleEmoji": "絵文字",
+    "moduleEmojiDesc": "3,700+ 種類の絵文字",
+    "moduleSymbols": "特殊記号",
+    "moduleSymbolsDesc": "1,800+ 種類の特殊文字",
+    "moduleFancyText": "おしゃれフォント",
+    "moduleFancyTextDesc": "20+ 種類のフォント",
+    "moduleCombos": "コンボ",
+    "moduleCombosDesc": "1,100+ 種類の組み合わせ",
+    "popularEmojis": "人気の絵文字",
+    "trendingCombos": "人気のコンボ",
+    "popularKaomoji": "人気の顔文字",
+    "aestheticDividers": "おしゃれ区切り線",
+    "oneLineAsciiArt": "一行AAアート",
+    "invisibleCharacters": "透明文字",
+    "brailleTranslator": "点字変換",
+    "viewAll": "すべて見る",
+    "tryIt": "試す",
+    "invisibleHint": "フィルターの回避やゲームでの空白名の作成に使用。"
+  },
+  "emoji": {
+    "title": "絵文字 コピー＆ペースト",
+    "metaTitle": "絵文字コピペ — 3,700+種類の全絵文字 (Unicode 16.0)",
+    "metaDesc": "肌の色バリエーションを含む3,700+種類の全絵文字を閲覧・コピー。Unicode 16.0完全対応。",
+    "clickToCopy": "絵文字をクリックでクリップボードにコピー。",
+    "emojisAvailable": "{count} 種類の絵文字が利用可能 (Unicode 16.0)。",
+    "searchPlaceholder": "絵文字を検索... (例: 笑顔、ハート、火)",
+    "byCategory": "カテゴリ別",
+    "byVersion": "バージョン / 年代別",
+    "shown": "表示中",
+    "allVersions": "全バージョン",
+    "emojiIntro": "種類の絵文字がこのバージョンで導入",
+    "recentlyUsed": "最近使用",
+    "noResults": "該当する絵文字が見つかりません",
+    "category": "カテゴリ",
+    "unicode": "Unicode",
+    "shortcode": "ショートコード",
+    "skinToneSupport": "肌色対応",
+    "skinToneYes": "✅ 対応",
+    "skinToneNo": "❌ 非対応",
+    "emojiVersion": "絵文字バージョン",
+    "subgroup": "サブカテゴリ",
+    "keywords": "キーワード",
+    "skinToneVariants": "肌色バリエーション",
+    "relatedEmojis": "関連する絵文字",
+    "allEmojis": "全ての絵文字",
+    "copyEmoji": "絵文字をコピー",
+    "copied": "コピーしました！"
+  },
+  "symbols": {
+    "title": "特殊記号 & 文字",
+    "metaTitle": "特殊記号 — 1,800+ Unicode記号をコピペ",
+    "metaDesc": "矢印、星、数学記号など1,800+の特殊記号をコピー＆ペースト。",
+    "clickToCopy": "記号をクリックでコピー。",
+    "searchPlaceholder": "記号を検索..."
+  },
+  "fancyText": {
+    "title": "おしゃれフォント生成",
+    "metaTitle": "おしゃれフォント生成 — 20+種類のクールフォント",
+    "metaDesc": "テキストをおしゃれフォントに変換。筆記体、太字、斜体など20+種類。"
+  },
+  "combos": {
+    "title": "絵文字コンボ",
+    "metaTitle": "絵文字コンボ — 1,100+種類のコピペ組み合わせ",
+    "metaDesc": "プロフィール、投稿、メッセージ用の1,100+種類の絵文字コンボを閲覧・コピー。",
+    "clickToCopy": "クリックでコンボをコピー。",
+    "searchPlaceholder": "コンボを検索..."
+  },
+  "kaomoji": {
+    "title": "顔文字 & AA",
+    "metaTitle": "顔文字 — 2,000+種類の顔文字コピペ",
+    "metaDesc": "2,000+種類の顔文字やアスキーアート顔文字を閲覧・コピー。",
+    "clickToCopy": "クリックで顔文字をコピー。",
+    "searchPlaceholder": "顔文字を検索..."
+  },
+  "dividers": {
+    "title": "テキスト区切り線"
+  },
+  "invisible": {
+    "title": "透明文字"
+  },
+  "braille": {
+    "title": "点字変換ツール"
+  },
+  "asciiArt": {
+    "title": "AAアート"
+  },
+  "footer": {
+    "description": "ウェブ上で最速・最美の絵文字ツール。絵文字、記号、テキストアートを瞬時にコピー。",
+    "tools": "ツール",
+    "moreTools": "その他ツール",
+    "emojiCopyPaste": "🔥 絵文字コピペ",
+    "specialSymbols": "★ 特殊記号",
+    "fancyTextGenerator": "𝓐 おしゃれフォント",
+    "emojiCombos": "🎭 絵文字コンボ",
+    "kaomojiEmoticons": "(·ω·) 顔文字",
+    "textDividers": "─── 区切り線",
+    "invisibleCharacters": "⠀ 透明文字",
+    "brailleTranslator": "⠓ 点字変換",
+    "asciiArt": "╱╲ AAアート",
+    "copyright": "© {year} EmojiKit. すべての絵文字の著作権はそれぞれの所有者に帰属します。",
+    "privacy": "プライバシー",
+    "terms": "利用規約"
+  },
+  "common": {
+    "copied": "{text} をコピーしました",
+    "copyToClipboard": "クリップボードにコピー",
+    "search": "検索",
+    "all": "すべて"
+  }
+}

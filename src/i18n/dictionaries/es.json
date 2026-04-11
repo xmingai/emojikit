@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "EmojiKit — Copiar y Pegar Emojis, Símbolos y Texto Elegante",
+    "description": "La herramienta de emojis más rápida y bonita de la web. Copia y pega emojis, símbolos especiales, texto elegante y combinaciones de emojis al instante."
+  },
+  "nav": {
+    "emoji": "Emojis",
+    "symbols": "Símbolos",
+    "fonts": "Fuentes",
+    "combos": "Combos",
+    "kaomoji": "Kaomoji",
+    "lines": "Líneas",
+    "invisible": "Invisible",
+    "braille": "Braille",
+    "art": "Arte",
+    "more": "Más",
+    "toggleTheme": "Cambiar tema",
+    "bookmarkTip": "o arrastra a Marcadores para guardar ✨"
+  },
+  "home": {
+    "heroTitle": "Copiar y Pegar",
+    "heroSubtitle": "La herramienta de emojis, símbolos y texto elegante más rápida de la web.",
+    "moduleEmoji": "Emojis",
+    "moduleEmojiDesc": "3,700+ emojis",
+    "moduleSymbols": "Símbolos",
+    "moduleSymbolsDesc": "1,800+ caracteres especiales",
+    "moduleFancyText": "Texto Elegante",
+    "moduleFancyTextDesc": "20+ estilos de fuente",
+    "moduleCombos": "Combos",
+    "moduleCombosDesc": "1,100+ combinaciones",
+    "popularEmojis": "Emojis Populares",
+    "trendingCombos": "Combos en Tendencia",
+    "popularKaomoji": "Kaomoji Populares",
+    "aestheticDividers": "Divisores Estéticos",
+    "oneLineAsciiArt": "Arte ASCII en Una Línea",
+    "invisibleCharacters": "Caracteres Invisibles",
+    "brailleTranslator": "Traductor Braille",
+    "viewAll": "Ver todo",
+    "tryIt": "Pruébalo",
+    "invisibleHint": "Úsalos para evadir filtros o crear nombres en blanco en juegos."
+  },
+  "emoji": {
+    "title": "Emojis Copiar y Pegar",
+    "metaTitle": "Emojis Copiar y Pegar — Todos los 3,700+ Emojis (Unicode 16.0)",
+    "metaDesc": "Explora y copia los 3,700+ emojis incluyendo variaciones de tono de piel. Soporte completo Unicode 16.0.",
+    "clickToCopy": "Haz clic en cualquier emoji para copiarlo al portapapeles.",
+    "emojisAvailable": "{count} emojis disponibles (Unicode 16.0).",
+    "searchPlaceholder": "Buscar emojis... (ej. fuego, corazón, sonrisa)",
+    "byCategory": "Por Categoría",
+    "byVersion": "Por Versión / Era",
+    "shown": "mostrados",
+    "allVersions": "Todas las Versiones",
+    "emojiIntro": "emojis introducidos en esta versión",
+    "recentlyUsed": "Usados Recientemente",
+    "noResults": "No se encontraron emojis para",
+    "category": "Categoría",
+    "unicode": "Unicode",
+    "shortcode": "Código corto",
+    "skinToneSupport": "Tono de Piel",
+    "skinToneYes": "✅ Sí",
+    "skinToneNo": "❌ No",
+    "emojiVersion": "Versión Emoji",
+    "subgroup": "Subcategoría",
+    "keywords": "Palabras clave",
+    "skinToneVariants": "Variaciones de Tono de Piel",
+    "relatedEmojis": "Emojis Relacionados",
+    "allEmojis": "Todos los Emojis",
+    "copyEmoji": "Copiar Emoji",
+    "copied": "¡Copiado!"
+  },
+  "symbols": {
+    "title": "Símbolos Especiales y Caracteres",
+    "metaTitle": "Símbolos Especiales — Copiar y Pegar 1,800+ Símbolos Unicode",
+    "metaDesc": "Copia y pega 1,800+ símbolos especiales incluyendo flechas, estrellas, símbolos matemáticos y más.",
+    "clickToCopy": "Haz clic en cualquier símbolo para copiarlo.",
+    "searchPlaceholder": "Buscar símbolos..."
+  },
+  "fancyText": {
+    "title": "Generador de Texto Elegante",
+    "metaTitle": "Generador de Texto Elegante — 20+ Estilos de Fuente",
+    "metaDesc": "Transforma tu texto en fuentes elegantes. 20+ estilos incluyendo cursiva, negrita, itálica y más."
+  },
+  "combos": {
+    "title": "Combos de Emojis",
+    "metaTitle": "Combos de Emojis — 1,100+ Combinaciones para Copiar",
+    "metaDesc": "Explora y copia 1,100+ combos de emojis para tu bio, publicaciones y mensajes.",
+    "clickToCopy": "Haz clic para copiar cualquier combo.",
+    "searchPlaceholder": "Buscar combos..."
+  },
+  "kaomoji": {
+    "title": "Kaomoji y Emoticonos Japoneses",
+    "metaTitle": "Kaomoji — 2,000+ Emoticonos Japoneses para Copiar",
+    "metaDesc": "Explora y copia 2,000+ kaomojis y emoticonos de estilo japonés.",
+    "clickToCopy": "Haz clic para copiar cualquier kaomoji.",
+    "searchPlaceholder": "Buscar kaomoji..."
+  },
+  "dividers": {
+    "title": "Divisores de Texto y Arte Lineal"
+  },
+  "invisible": {
+    "title": "Caracteres Invisibles"
+  },
+  "braille": {
+    "title": "Traductor Braille"
+  },
+  "asciiArt": {
+    "title": "Arte ASCII"
+  },
+  "footer": {
+    "description": "La herramienta de emojis más rápida y bonita de la web. Copia emojis, símbolos y arte textual al instante.",
+    "tools": "Herramientas",
+    "moreTools": "Más Herramientas",
+    "emojiCopyPaste": "🔥 Emojis Copiar y Pegar",
+    "specialSymbols": "★ Símbolos Especiales",
+    "fancyTextGenerator": "𝓐 Generador de Texto Elegante",
+    "emojiCombos": "🎭 Combos de Emojis",
+    "kaomojiEmoticons": "(·ω·) Kaomoji / Emoticonos",
+    "textDividers": "─── Divisores de Texto",
+    "invisibleCharacters": "⠀ Caracteres Invisibles",
+    "brailleTranslator": "⠓ Traductor Braille",
+    "asciiArt": "╱╲ Arte ASCII",
+    "copyright": "© {year} EmojiKit. Todos los derechos de autor de los emojis pertenecen a sus respectivos propietarios.",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "common": {
+    "copied": "{text} copiado",
+    "copyToClipboard": "Copiar al portapapeles",
+    "search": "Buscar",
+    "all": "Todo"
+  }
+}

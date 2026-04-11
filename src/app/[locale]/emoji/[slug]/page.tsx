@@ -6,14 +6,18 @@ import { CopyButton } from "./copy-button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft } from "lucide-react";
+import { getDictionary } from "@/i18n/dictionaries";
+import { locales, type Locale } from "@/i18n/config";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -32,23 +36,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function EmojiDetailPage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  const dict = await getDictionary(locale as Locale);
   const emoji = getEmojiBySlug(slug);
 
   if (!emoji) notFound();
 
   const related = getRelatedEmojis(emoji, 20);
   const skinToneVariants = getSkinToneVariants(emoji);
+  const t = dict.emoji;
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
       {/* Back */}
       <Link
-        href="/emoji"
+        href={`${prefix}/emoji`}
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
-        All Emojis
+        {t.allEmojis}
       </Link>
 
       {/* Hero */}
@@ -62,45 +69,45 @@ export default async function EmojiDetailPage({ params }: Props) {
 
       {/* Info */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-        <InfoBlock title="Category">
+        <InfoBlock title={t.category}>
           <Link
-            href={`/emoji?category=${emoji.groupSlug}`}
+            href={`${prefix}/emoji?category=${emoji.groupSlug}`}
             className="text-sm hover:underline"
           >
             {emoji.group}
           </Link>
         </InfoBlock>
 
-        <InfoBlock title="Unicode">
+        <InfoBlock title={t.unicode}>
           <code className="text-sm font-mono bg-muted px-2 py-0.5 rounded">
             {emoji.unicode}
           </code>
         </InfoBlock>
 
-        <InfoBlock title="Shortcode">
+        <InfoBlock title={t.shortcode}>
           <code className="text-sm font-mono bg-muted px-2 py-0.5 rounded break-all inline-block">
             :{emoji.slug.replace(/-/g, "_")}:
           </code>
         </InfoBlock>
 
-        <InfoBlock title="Skin Tone Support">
-          <span className="text-sm">{emoji.skinToneSupport ? "✅ Yes" : "❌ No"}</span>
+        <InfoBlock title={t.skinToneSupport}>
+          <span className="text-sm">{emoji.skinToneSupport ? t.skinToneYes : t.skinToneNo}</span>
         </InfoBlock>
 
-        <InfoBlock title="Emoji Version">
+        <InfoBlock title={t.emojiVersion}>
           <Badge variant="secondary" className="text-xs">
             {emoji.emojiVersion} · {emoji.year}
           </Badge>
         </InfoBlock>
 
-        <InfoBlock title="Subgroup">
+        <InfoBlock title={t.subgroup}>
           <span className="text-sm">{emoji.subgroup}</span>
         </InfoBlock>
       </div>
 
       {/* Keywords */}
       <div className="mb-8">
-        <h2 className="text-sm font-medium text-muted-foreground mb-2">Keywords</h2>
+        <h2 className="text-sm font-medium text-muted-foreground mb-2">{t.keywords}</h2>
         <div className="flex flex-wrap gap-1.5">
           {emoji.keywords.map((kw) => (
             <Badge key={kw} variant="secondary" className="text-xs">
@@ -115,10 +122,10 @@ export default async function EmojiDetailPage({ params }: Props) {
         <>
           <Separator className="my-8" />
           <div className="mb-8">
-            <h2 className="text-lg font-semibold mb-4">Skin Tone Variants</h2>
+            <h2 className="text-lg font-semibold mb-4">{t.skinToneVariants}</h2>
             <div className="flex flex-wrap gap-2">
               <Link
-                href={`/emoji/${emoji.slug}`}
+                href={`${prefix}/emoji/${emoji.slug}`}
                 className="text-4xl p-3 rounded-xl bg-muted/50 border border-border/50"
                 title={emoji.name}
               >
@@ -127,7 +134,7 @@ export default async function EmojiDetailPage({ params }: Props) {
               {skinToneVariants.map((v) => (
                 <Link
                   key={v.id}
-                  href={`/emoji/${v.slug}`}
+                  href={`${prefix}/emoji/${v.slug}`}
                   className="text-4xl p-3 rounded-xl hover:bg-muted transition-all"
                   title={v.name}
                 >
@@ -144,12 +151,12 @@ export default async function EmojiDetailPage({ params }: Props) {
       {/* Related */}
       {related.length > 0 && (
         <div>
-          <h2 className="text-lg font-semibold mb-4">Related Emojis</h2>
+          <h2 className="text-lg font-semibold mb-4">{t.relatedEmojis}</h2>
           <div className="flex flex-wrap gap-1">
             {related.map((r) => (
               <Link
                 key={r.id}
-                href={`/emoji/${r.slug}`}
+                href={`${prefix}/emoji/${r.slug}`}
                 className="text-3xl p-2 rounded-xl hover:bg-muted transition-all"
                 title={r.name}
               >
