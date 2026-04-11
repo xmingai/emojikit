@@ -38,7 +38,13 @@
     "viewAll": "查看全部",
     "tryIt": "试一试",
     "invisibleHint": "用于绕过过滤器或在游戏中创建空白名称。",
-    "typewriterWords": ["一键复制", "随时随地", "轻松获取", "简单便捷", "全网最快"]
+    "typewriterWords": [
+      "一键复制",
+      "随时随地",
+      "轻松获取",
+      "简单便捷",
+      "全网最快"
+    ]
   },
   "emoji": {
     "title": "表情符号 一键复制",
@@ -67,7 +73,8 @@
     "relatedEmojis": "相关表情",
     "allEmojis": "全部表情",
     "copyEmoji": "复制表情",
-    "copied": "已复制！"
+    "copied": "已复制！",
+    "meaning": "含义与描述"
   },
   "symbols": {
     "title": "特殊符号 & 字符",

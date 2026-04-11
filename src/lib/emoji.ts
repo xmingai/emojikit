@@ -16,6 +16,7 @@ export type Emoji = {
   year: number | null;
   unicode: string;
   keywords: string[];
+  meaning?: string;
 };
 
 export type Category = {

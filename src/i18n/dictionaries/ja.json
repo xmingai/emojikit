@@ -38,7 +38,13 @@
     "viewAll": "すべて見る",
     "tryIt": "試す",
     "invisibleHint": "フィルターの回避やゲームでの空白名の作成に使用。",
-    "typewriterWords": ["瞬時に", "簡単に", "どこでも", "素早く", "手軽に"]
+    "typewriterWords": [
+      "瞬時に",
+      "簡単に",
+      "どこでも",
+      "素早く",
+      "手軽に"
+    ]
   },
   "emoji": {
     "title": "絵文字 コピー＆ペースト",
@@ -67,7 +73,8 @@
     "relatedEmojis": "関連する絵文字",
     "allEmojis": "全ての絵文字",
     "copyEmoji": "絵文字をコピー",
-    "copied": "コピーしました！"
+    "copied": "コピーしました！",
+    "meaning": "意味と説明"
   },
   "symbols": {
     "title": "特殊記号 & 文字",

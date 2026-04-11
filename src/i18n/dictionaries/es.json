@@ -73,7 +73,8 @@
     "relatedEmojis": "Emojis Relacionados",
     "allEmojis": "Todos los Emojis",
     "copyEmoji": "Copiar Emoji",
-    "copied": "¡Copiado!"
+    "copied": "¡Copiado!",
+    "meaning": "Significado y Descripción"
   },
   "symbols": {
     "title": "Símbolos Especiales y Caracteres",

@@ -38,7 +38,13 @@
     "viewAll": "View all",
     "tryIt": "Try it",
     "invisibleHint": "Use to bypass filters or create blank names in games.",
-    "typewriterWords": ["Instantly", "Easily", "Anywhere", "Quickly", "Effortlessly"]
+    "typewriterWords": [
+      "Instantly",
+      "Easily",
+      "Anywhere",
+      "Quickly",
+      "Effortlessly"
+    ]
   },
   "emoji": {
     "title": "Emoji Copy & Paste",
@@ -67,7 +73,8 @@
     "relatedEmojis": "Related Emojis",
     "allEmojis": "All Emojis",
     "copyEmoji": "Copy Emoji",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "meaning": "Meaning & Description"
   },
   "symbols": {
     "title": "Special Symbols & Characters",

@@ -38,7 +38,13 @@
     "viewAll": "전체 보기",
     "tryIt": "사용해보기",
     "invisibleHint": "필터 우회나 게임에서 빈 이름 만들기에 사용.",
-    "typewriterWords": ["즉시", "쉽게", "어디서나", "빠르게", "간편하게"]
+    "typewriterWords": [
+      "즉시",
+      "쉽게",
+      "어디서나",
+      "빠르게",
+      "간편하게"
+    ]
   },
   "emoji": {
     "title": "이모지 복사 & 붙여넣기",
@@ -67,7 +73,8 @@
     "relatedEmojis": "관련 이모지",
     "allEmojis": "모든 이모지",
     "copyEmoji": "이모지 복사",
-    "copied": "복사됨!"
+    "copied": "복사됨!",
+    "meaning": "의미 및 설명"
   },
   "symbols": {
     "title": "특수문자 & 기호",

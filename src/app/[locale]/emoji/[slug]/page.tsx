@@ -76,6 +76,16 @@ export default async function EmojiDetailPage({ params }: Props) {
 
       <Separator className="my-8" />
 
+      {/* Meaning */}
+      {emoji.meaning && (
+        <div className="mb-8 p-6 rounded-2xl bg-muted/20 border border-border/50">
+          <h2 className="text-lg font-semibold mb-3">{t.meaning}</h2>
+          <p className="text-base leading-relaxed text-foreground/90">
+            {emoji.meaning}
+          </p>
+        </div>
+      )}
+
       {/* Info */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <InfoBlock title={t.category}>
