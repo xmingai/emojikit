@@ -37,7 +37,14 @@
     "brailleTranslator": "Traductor Braille",
     "viewAll": "Ver todo",
     "tryIt": "Pruébalo",
-    "invisibleHint": "Úsalos para evadir filtros o crear nombres en blanco en juegos."
+    "invisibleHint": "Úsalos para evadir filtros o crear nombres en blanco en juegos.",
+    "typewriterWords": [
+      "Al Instante",
+      "Fácilmente",
+      "Donde Sea",
+      "Rápidamente",
+      "Sin Esfuerzo"
+    ]
   },
   "emoji": {
     "title": "Emojis Copiar y Pegar",
@@ -110,15 +117,15 @@
     "description": "La herramienta de emojis más rápida y bonita de la web. Copia emojis, símbolos y arte textual al instante.",
     "tools": "Herramientas",
     "moreTools": "Más Herramientas",
-    "emojiCopyPaste": "🔥 Emojis Copiar y Pegar",
-    "specialSymbols": "★ Símbolos Especiales",
-    "fancyTextGenerator": "𝓐 Generador de Texto Elegante",
-    "emojiCombos": "🎭 Combos de Emojis",
-    "kaomojiEmoticons": "(·ω·) Kaomoji / Emoticonos",
-    "textDividers": "─── Divisores de Texto",
-    "invisibleCharacters": "⠀ Caracteres Invisibles",
-    "brailleTranslator": "⠓ Traductor Braille",
-    "asciiArt": "╱╲ Arte ASCII",
+    "emojiCopyPaste": "Emojis Copiar y Pegar",
+    "specialSymbols": "Símbolos Especiales",
+    "fancyTextGenerator": "Generador de Texto Elegante",
+    "emojiCombos": "Combos de Emojis",
+    "kaomojiEmoticons": "Kaomoji / Emoticonos",
+    "textDividers": "Divisores de Texto",
+    "invisibleCharacters": "Caracteres Invisibles",
+    "brailleTranslator": "Traductor Braille",
+    "asciiArt": "Arte ASCII",
     "copyright": "© {year} EmojiKit. Todos los derechos de autor de los emojis pertenecen a sus respectivos propietarios.",
     "privacy": "Privacidad",
     "terms": "Términos"

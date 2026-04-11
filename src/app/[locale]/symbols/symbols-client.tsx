@@ -50,9 +50,6 @@ export function SymbolsClient() {
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold mb-1">Special Symbols & Characters</h1>
-          <p className="text-sm text-muted-foreground">
-            Click any symbol to copy it to your clipboard. Browse by category or search.
-          </p>
         </div>
         <div className="shrink-0 mt-2 sm:mt-0">
           <SizeSlider sizeIndex={sizeIndex} setSizeIndex={setSizeIndex} />

@@ -19,9 +19,6 @@ export function BrailleClient() {
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold mb-1">Braille & Morse Translator</h1>
-          <p className="text-sm text-muted-foreground">
-            Type text below to convert it into Braille dots or Morse code.
-          </p>
         </div>
         <div className="shrink-0 mt-2 sm:mt-0">
           <SizeSlider sizeIndex={sizeIndex} setSizeIndex={setSizeIndex} presets={FANCY_TEXT_SIZE_PRESETS} />

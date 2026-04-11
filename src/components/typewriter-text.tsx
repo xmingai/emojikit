@@ -2,21 +2,25 @@
 
 import { useState, useEffect } from "react";
 
-const WORDS = ["Instantly", "Easily", "Anywhere", "Quickly", "Effortlessly"];
+interface TypewriterTextProps {
+  words: string[];
+}
 
-export function TypewriterText() {
+export function TypewriterText({ words }: TypewriterTextProps) {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentWord = WORDS[wordIndex];
+    // Fallback if words is somehow empty
+    if (!words || words.length === 0) return;
+    const currentWord = words[wordIndex] || words[0];
     let timeout: NodeJS.Timeout;
 
     if (isDeleting) {
       if (text === "") {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % WORDS.length);
+        setWordIndex((prev) => (prev + 1) % words.length);
         timeout = setTimeout(() => {}, 500); // Pause before typing next word
       } else {
         timeout = setTimeout(() => {

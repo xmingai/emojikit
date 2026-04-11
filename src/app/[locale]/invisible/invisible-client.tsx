@@ -23,9 +23,6 @@ export function InvisibleClient() {
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold mb-1">Invisible Characters & Blank Text</h1>
-          <p className="text-sm text-muted-foreground">
-            Copy zero-width spaces, empty characters, and blank text for games, Discord, and social media.
-          </p>
         </div>
       </div>
 
