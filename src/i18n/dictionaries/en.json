@@ -60,7 +60,22 @@
     "preview_sniper": "Sniper",
     "preview_spider": "Spider",
     "preview_zwspName": "Zero Width Space (ZWSP)",
-    "preview_helloWorld": "Hello World"
+    "preview_helloWorld": "Hello World",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "What is MojiCap?",
+        "a": "MojiCap is a completely free, lightning-fast platform that allows you to instantly copy and paste emojis, special symbols, text art, and fancy fonts to any device or application."
+      },
+      {
+        "q": "Do I need to download an app or keyboard?",
+        "a": "No! MojiCap works entirely in your browser. There is no software to install or sign-up required. Just tap to copy."
+      },
+      {
+        "q": "Are these emojis free to use?",
+        "a": "Yes, 100% free! You can use everything you copy from our site on Instagram, Twitter, TikTok, Discord, and messaging apps."
+      }
+    ]
   },
   "emoji": {
     "title": "Emoji Copy & Paste",

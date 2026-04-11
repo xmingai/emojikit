@@ -60,7 +60,22 @@
     "preview_sniper": "Francotirador",
     "preview_spider": "Araña",
     "preview_zwspName": "Espacio de Ancho Cero (ZWSP)",
-    "preview_helloWorld": "Hola Mundo"
+    "preview_helloWorld": "Hola Mundo",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Qué es MojiCap?",
+        "a": "MojiCap es una plataforma completamente gratuita y ultrarrápida que te permite copiar y pegar emojis, símbolos especiales, arte ASCII y fuentes elegantes al instante."
+      },
+      {
+        "q": "¿Necesito descargar una aplicación o teclado especial?",
+        "a": "¡No! MojiCap funciona totalmente en tu navegador web. No hay software que instalar ni cuentas que registrar. Solo toca para copiar."
+      },
+      {
+        "q": "¿Puedo usarlos en mis redes sociales?",
+        "a": "Sí, es 100% libre. Puedes usar todo lo que copies de nuestro sitio en Instagram, Twitter (X), TikTok, Discord o WhatsApp."
+      }
+    ]
   },
   "emoji": {
     "title": "Emojis Copiar y Pegar",

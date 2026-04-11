@@ -59,7 +59,22 @@
     "preview_sniper": "狙击手",
     "preview_spider": "蜘蛛",
     "preview_zwspName": "零宽空格 (ZWSP)",
-    "preview_helloWorld": "你好世界 (Hello World)"
+    "preview_helloWorld": "你好世界 (Hello World)",
+    "faqTitle": "常见问题解答 (FAQ)",
+    "faq": [
+      {
+        "q": "MojiCap 是什么？",
+        "a": "MojiCap 是一个完全免费且极速运行的在线工具库。它允许你通过点击，瞬间复制并使用所有的最新 Emoji、特殊符号、颜文字和花体字。"
+      },
+      {
+        "q": "我需要下载 App 或特定的输入法吗？",
+        "a": "完全不需要！MojiCap 100% 在你的浏览器中运行。没有弹窗、无需注册登录，也不用安装任何杂乱的软件，即用即走。"
+      },
+      {
+        "q": "可以直接用在微信和小红书里吗？",
+        "a": "当然可以。你在 MojiCap 复制的所有表情和符号，都是标准的 Unicode 文本，可以直接粘贴到微信、QQ、小红书、抖音、微博等任何平台。"
+      }
+    ]
   },
   "emoji": {
     "title": "表情符号 一键复制",

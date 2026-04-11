@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { ComboButton } from "@/components/copy-buttons";
 import { PopularEmojiGrid } from "@/components/popular-emoji-grid";
 import { TypewriterText } from "@/components/typewriter-text";
+import { FAQSection } from "@/components/faq-section";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 
@@ -248,6 +249,11 @@ export function HomeClient({ dict, locale }: HomeClientProps) {
           <ComboButton name={t.preview_helloWorld as string} combo="⠓⠑⠇⠇⠕⠀⠺⠕⠗⠇⠙" />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {t.faq && (t.faq as any[]).length > 0 && (
+        <FAQSection title={t.faqTitle as string} faqs={t.faq as any} />
+      )}
     </div>
   );
 }
