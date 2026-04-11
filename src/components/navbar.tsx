@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 const MAIN_LINKS = [
@@ -31,10 +32,17 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 font-semibold text-xl tracking-tight">
-          <Image src="/logo.png" alt="EmojiKit Logo" width={44} height={44} className="rounded-md" />
-          <span>EmojiKit</span>
-        </Link>
+        <Tooltip>
+          <TooltipTrigger className="cursor-pointer" render={<div />}>
+            <Link href="/" className="flex items-center gap-3 font-semibold text-xl tracking-tight">
+              <Image src="/logo.png" alt="EmojiKit Logo" width={44} height={44} className="rounded-md" />
+              <span>EmojiKit</span>
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side="bottom" sideOffset={14}>
+            <p className="flex items-center gap-1.5"><span className="text-[10px] px-1 py-0.5 bg-background text-foreground rounded">Cmd/Ctrl + D</span> or drag to Bookmarks to save ✨</p>
+          </TooltipContent>
+        </Tooltip>
 
         {/* Nav Links - Desktop */}
         <nav className="hidden lg:flex items-center gap-1">
