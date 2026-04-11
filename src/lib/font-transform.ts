@@ -111,6 +111,50 @@ export const FONT_MAPS: FontMap[] = [
     ),
   },
   {
+    name: "Subscript",
+    slug: "subscript",
+    map: buildMap(
+      "ₐbcdₑfgₕᵢⱼₖₗₘₙₒₚqᵣₛₜᵤᵥwₓyz".split(""),
+      "ₐBCDₑFGₕᵢⱼₖₗₘₙₒₚQᵣₛₜᵤᵥWₓYZ".split(""),
+      ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"]
+    ),
+  },
+  {
+    name: "Fullwidth",
+    slug: "fullwidth",
+    map: buildMap(
+      Array.from({ length: 26 }, (_, i) => String.fromCodePoint(0xff41 + i)),
+      Array.from({ length: 26 }, (_, i) => String.fromCodePoint(0xff21 + i)),
+      Array.from({ length: 10 }, (_, i) => String.fromCodePoint(0xff10 + i))
+    ),
+  },
+  {
+    name: "L33t Speak",
+    slug: "l33t",
+    map: buildMap(
+      "4bcd3f9h1jklmn0pqr57uvwxyz".split(""),
+      "4BCD3F9H1JKLMN0PQR57UVWXYZ".split("")
+    ),
+  },
+  {
+    name: "Faux Cyrillic",
+    slug: "faux-cyrillic",
+    map: buildMap(
+      "дбсdэfgнїjкlмиорqяsтцvшхчz".split(""),
+      "ДБСDЭFGНІJКLМИОРQЯSТЦVШХЧZ".split("")
+    ),
+  },
+  {
+    name: "Zalgo (Creepy)",
+    slug: "zalgo",
+    map: {}, // handled specially
+  },
+  {
+    name: "Slash Through",
+    slug: "slash-through",
+    map: {}, // handled specially
+  },
+  {
     name: "Strikethrough",
     slug: "strikethrough",
     map: {}, // handled specially
@@ -138,6 +182,21 @@ export function transformText(text: string, fontSlug: string): string {
       .reverse()
       .join("");
     return result;
+  }
+  if (fontSlug === "slash-through") {
+    return [...text].map((c) => c + "\u0338").join("");
+  }
+  if (fontSlug === "zalgo") {
+    const zalgoUp = ["\u030d","\u030e","\u0304","\u0305","\u033f","\u0311","\u0306","\u0310","\u0352","\u0351","\u0308","\u0309"];
+    const zalgoDown = ["\u0316","\u0317","\u0318","\u0319","\u031c","\u031d","\u031e","\u031f","\u0320","\u0324","\u0325","\u0326"];
+    const zalgoMid = ["\u0315","\u031b","\u0340","\u0341","\u0358","\u0321","\u0322","\u0327","\u0328","\u0334","\u0335","\u0336"];
+    return [...text].map((c, i) => {
+      if (c === " ") return c;
+      const u = zalgoUp[(i * 3 + 1) % zalgoUp.length];
+      const d = zalgoDown[(i * 5 + 2) % zalgoDown.length];
+      const m = zalgoMid[(i * 7 + 3) % zalgoMid.length];
+      return c + u + m + d;
+    }).join("");
   }
 
   return [...text].map((c) => font.map[c] || c).join("");
