@@ -144,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* Trending Combos Preview */}
-      <section>
+      <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold">Trending Combos</h2>
           <Link
