@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getEmojiBySlug, getRelatedEmojis, getSkinToneVariants } from "@/lib/emoji";
+import { getEmojiTranslation } from "@/lib/emoji-i18n";
 import { CopyButton } from "./copy-button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -27,13 +28,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!emoji) return { title: "Emoji Not Found" };
 
   const prefix = locale === "en" ? "" : `/${locale}`;
+  const i18n = getEmojiTranslation(slug, locale as Locale);
+  const localName = i18n?.name || emoji.name;
 
   return {
-    title: `${emoji.emoji} ${emoji.name} Emoji — Copy & Paste`,
-    description: `Copy the ${emoji.name} emoji ${emoji.emoji}. Learn its meaning, Unicode code (${emoji.unicode}), and find related emojis.`,
+    title: `${emoji.emoji} ${localName} Emoji — Copy & Paste`,
+    description: `Copy the ${localName} emoji ${emoji.emoji}. Learn its meaning, Unicode code (${emoji.unicode}), and find related emojis.`,
     openGraph: {
-      title: `${emoji.emoji} ${emoji.name} Emoji`,
-      description: `Copy the ${emoji.name} emoji ${emoji.emoji}. Unicode: ${emoji.unicode}`,
+      title: `${emoji.emoji} ${localName} Emoji`,
+      description: `Copy the ${localName} emoji ${emoji.emoji}. Unicode: ${emoji.unicode}`,
     },
     alternates: {
       canonical: `${prefix}/emoji/${slug}`,
@@ -50,6 +53,12 @@ export default async function EmojiDetailPage({ params }: Props) {
   const emoji = getEmojiBySlug(slug);
 
   if (!emoji) notFound();
+
+  const i18n = getEmojiTranslation(slug, locale as Locale);
+  const localName = i18n?.name || emoji.name;
+  const localKeywords = i18n?.keywords || emoji.keywords;
+  const localMeaning = i18n?.meaning || emoji.meaning;
+  const localGroupName = i18n?.groupName || emoji.group;
 
   const related = getRelatedEmojis(emoji, 20);
   const skinToneVariants = getSkinToneVariants(emoji);
@@ -70,18 +79,18 @@ export default async function EmojiDetailPage({ params }: Props) {
       {/* Hero */}
       <div className="text-center mb-8">
         <span className="text-8xl sm:text-9xl block mb-4">{emoji.emoji}</span>
-        <h1 className="text-2xl font-bold mb-2">{emoji.name}</h1>
-        <CopyButton emoji={emoji.emoji} name={emoji.name} />
+        <h1 className="text-2xl font-bold mb-2">{localName}</h1>
+        <CopyButton emoji={emoji.emoji} name={localName} />
       </div>
 
       <Separator className="my-8" />
 
       {/* Meaning */}
-      {emoji.meaning && (
+      {localMeaning && (
         <div className="mb-8 p-6 rounded-2xl bg-muted/20 border border-border/50">
           <h2 className="text-lg font-semibold mb-3">{t.meaning}</h2>
           <p className="text-base leading-relaxed text-foreground/90">
-            {emoji.meaning}
+            {localMeaning}
           </p>
         </div>
       )}
@@ -93,7 +102,7 @@ export default async function EmojiDetailPage({ params }: Props) {
             href={`${prefix}/emoji?category=${emoji.groupSlug}`}
             className="text-sm hover:underline"
           >
-            {emoji.group}
+            {localGroupName}
           </Link>
         </InfoBlock>
 
@@ -128,7 +137,7 @@ export default async function EmojiDetailPage({ params }: Props) {
       <div className="mb-8">
         <h2 className="text-sm font-medium text-muted-foreground mb-2">{t.keywords}</h2>
         <div className="flex flex-wrap gap-1.5">
-          {emoji.keywords.map((kw) => (
+          {localKeywords.map((kw) => (
             <Badge key={kw} variant="secondary" className="text-xs">
               {kw}
             </Badge>
@@ -146,20 +155,23 @@ export default async function EmojiDetailPage({ params }: Props) {
               <Link
                 href={`${prefix}/emoji/${emoji.slug}`}
                 className="text-4xl p-3 rounded-xl bg-muted/50 border border-border/50"
-                title={emoji.name}
+                title={localName}
               >
                 {emoji.emoji}
               </Link>
-              {skinToneVariants.map((v) => (
-                <Link
-                  key={v.id}
-                  href={`${prefix}/emoji/${v.slug}`}
-                  className="text-4xl p-3 rounded-xl hover:bg-muted transition-all"
-                  title={v.name}
-                >
-                  {v.emoji}
-                </Link>
-              ))}
+              {skinToneVariants.map((v) => {
+                const vI18n = getEmojiTranslation(v.slug, locale as Locale);
+                return (
+                  <Link
+                    key={v.id}
+                    href={`${prefix}/emoji/${v.slug}`}
+                    className="text-4xl p-3 rounded-xl hover:bg-muted transition-all"
+                    title={vI18n?.name || v.name}
+                  >
+                    {v.emoji}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </>
@@ -172,16 +184,19 @@ export default async function EmojiDetailPage({ params }: Props) {
         <div>
           <h2 className="text-lg font-semibold mb-4">{t.relatedEmojis}</h2>
           <div className="flex flex-wrap gap-1">
-            {related.map((r) => (
-              <Link
-                key={r.id}
-                href={`${prefix}/emoji/${r.slug}`}
-                className="text-3xl p-2 rounded-xl hover:bg-muted transition-all"
-                title={r.name}
-              >
-                {r.emoji}
-              </Link>
-            ))}
+            {related.map((r) => {
+              const rI18n = getEmojiTranslation(r.slug, locale as Locale);
+              return (
+                <Link
+                  key={r.id}
+                  href={`${prefix}/emoji/${r.slug}`}
+                  className="text-3xl p-2 rounded-xl hover:bg-muted transition-all"
+                  title={rI18n?.name || r.name}
+                >
+                  {r.emoji}
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
