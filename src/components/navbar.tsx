@@ -117,7 +117,7 @@ export function Navbar() {
               <span>{dict.nav.more}</span>
             </button>
 
-            <div className="absolute top-full right-0 mt-2 w-48 p-2 rounded-2xl border border-white/20 dark:border-white/10 bg-background/50 backdrop-blur-3xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(0,0,0,0.1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid gap-1">
+            <div className="absolute top-full right-0 mt-2 w-48 p-2 rounded-2xl border border-white/20 dark:border-white/10 bg-background/95 backdrop-blur-3xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid gap-1 z-50">
               {MORE_LINKS.map((link) => (
                 <Link
                   key={link.href}
