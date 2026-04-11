@@ -132,7 +132,7 @@ export default function HomePage() {
       {/* Popular Emojis */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">🔥 Popular Emojis</h2>
+          <h2 className="text-xl font-semibold">Popular Emojis</h2>
           <Link
             href="/emoji"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -146,7 +146,7 @@ export default function HomePage() {
       {/* Trending Combos Preview */}
       <section>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">✨ Trending Combos</h2>
+          <h2 className="text-xl font-semibold">Trending Combos</h2>
           <Link
             href="/combos"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -164,7 +164,7 @@ export default function HomePage() {
       {/* Kaomoji Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">(·ω·) Popular Kaomoji</h2>
+          <h2 className="text-xl font-semibold">Popular Kaomoji</h2>
           <Link
             href="/kaomoji"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -182,7 +182,7 @@ export default function HomePage() {
       {/* Dividers Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">─── Aesthetic Dividers</h2>
+          <h2 className="text-xl font-semibold">Aesthetic Dividers</h2>
           <Link
             href="/dividers"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -200,7 +200,7 @@ export default function HomePage() {
       {/* ASCII Art Preview */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">╱╲ One-Line ASCII Art</h2>
+          <h2 className="text-xl font-semibold">One-Line ASCII Art</h2>
           <Link
             href="/ascii-art"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -219,7 +219,7 @@ export default function HomePage() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">⠀ Invisible Characters</h2>
+            <h2 className="text-xl font-semibold">Invisible Characters</h2>
             <Link href="/invisible" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               View all <ArrowRight className="h-3 w-3" />
             </Link>
@@ -229,7 +229,7 @@ export default function HomePage() {
         </div>
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">⠓ Braille Translator</h2>
+            <h2 className="text-xl font-semibold">Braille Translator</h2>
             <Link href="/braille" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               Try it <ArrowRight className="h-3 w-3" />
             </Link>
