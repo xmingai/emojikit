@@ -84,7 +84,7 @@ export function DividersClient() {
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             )}
           >
-            {cat.category}
+            {dict.categories?.[cat.category as keyof typeof dict.categories] || cat.category}
           </button>
         ))}
       </div>
@@ -93,7 +93,7 @@ export function DividersClient() {
       {filteredCategories.map((cat) => (
         <div key={cat.category}>
           <h2 className="text-lg font-semibold mb-3">
-            {cat.category}
+            {dict.categories?.[cat.category as keyof typeof dict.categories] || cat.category}
           </h2>
           <div className="flex flex-col gap-2">
             {cat.dividers.map((d, i) => (

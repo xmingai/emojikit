@@ -22,35 +22,37 @@ const POPULAR_EMOJIS = [
   "🐶", "🌸", "🌹", "🍕", "☕", "🎶", "💎", "👀", "🙈", "❄️",
 ];
 
-const TRENDING_COMBOS = [
-  { name: "Coquette", combo: "🎀🌷🫧🧸🩰" },
-  { name: "Summer Vibes", combo: "☀️🏖️🌊🍹🌴" },
-  { name: "Dark Academia", combo: "📚🖋️🕯️🏛️🤎" },
-  { name: "Party", combo: "🎉🥳🎊✨🎈" },
-  { name: "Nature Core", combo: "🍄🌿🐚🍃🪵" },
-  { name: "Sad Hours", combo: "😢💔🥺😞🌧" },
-];
-
-const PREVIEW_KAOMOJI = [
-  { name: "Table Flip", text: "(╯°□°)╯︵ ┻━┻" },
-  { name: "Sparkles", text: "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" },
-  { name: "Bear", text: "ʕ•ᴥ•ʔ" },
-  { name: "Fight", text: "(ง'̀-'́)ง" },
-];
-
-const PREVIEW_DIVIDERS = [
-  { name: "Stars", text: "────── ⋆⋅☆⋅⋆ ──────" },
-  { name: "Flowers", text: "⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆" },
-];
-
-const PREVIEW_ASCII_ART = [
-  { name: "Sniper", text: "︻デ═一" },
-  { name: "Spider", text: "/╲/\\╭ºoº╮/\\╱\\" },
-];
-
 export function HomeClient({ dict, locale }: HomeClientProps) {
   const t = dict.home;
   const prefix = locale === "en" ? "" : `/${locale}`;
+
+  const TRENDING_COMBOS = [
+    { name: t.preview_coquette, combo: "🎀🌷🫧🧸🩰" },
+    { name: t.preview_summerVibes, combo: "☀️🏖️🌊🍹🌴" },
+    { name: t.preview_darkAcademia, combo: "📚🖋️🕯️🏛️🤎" },
+    { name: t.preview_party, combo: "🎉🥳🎊✨🎈" },
+    { name: t.preview_natureCore, combo: "🍄🌿🐚🍃🪵" },
+    { name: t.preview_sadHours, combo: "😢💔🥺😞🌧" },
+  ];
+
+  const PREVIEW_KAOMOJI = [
+    { name: t.preview_tableFlip, text: "(╯°□°)╯︵ ┻━┻" },
+    { name: t.preview_sparkles, text: "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" },
+    { name: t.preview_bear, text: "ʕ•ᴥ•ʔ" },
+    { name: t.preview_fight, text: "(ง'̀-'́)ง" },
+  ];
+
+  const PREVIEW_DIVIDERS = [
+    { name: t.preview_stars, text: "────── ⋆⋅☆⋅⋆ ──────" },
+    { name: t.preview_flowers, text: "⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆" },
+  ];
+
+  const PREVIEW_ASCII_ART = [
+    { name: t.preview_sniper, text: "︻デ═一" },
+    { name: t.preview_spider, text: "/╲/\\╭ºoº╮/\\╱\\" },
+  ];
+
+
 
   const MODULES = [
     {
@@ -233,7 +235,7 @@ export function HomeClient({ dict, locale }: HomeClientProps) {
               {t.viewAll} <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
-          <ComboButton name="Zero Width Space (ZWSP)" combo="[​]" />
+          <ComboButton name={t.preview_zwspName as string} combo="[​]" />
           <p className="text-xs text-muted-foreground mt-2 px-1">{t.invisibleHint}</p>
         </div>
         <div>
@@ -243,7 +245,7 @@ export function HomeClient({ dict, locale }: HomeClientProps) {
               {t.tryIt} <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
-          <ComboButton name="Hello World" combo="⠓⠑⠇⠇⠕⠀⠺⠕⠗⠇⠙" />
+          <ComboButton name={t.preview_helloWorld as string} combo="⠓⠑⠇⠇⠕⠀⠺⠕⠗⠇⠙" />
         </div>
       </section>
     </div>

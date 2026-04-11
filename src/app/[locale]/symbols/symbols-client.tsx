@@ -83,7 +83,7 @@ export function SymbolsClient() {
               )}
             >
               {cat.icon && <span className="text-base">{cat.icon}</span>}
-              {cat.name}
+              {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
               <span className="ml-auto text-xs opacity-60">{cat.symbols.length}</span>
             </button>
           ))}
@@ -105,7 +105,8 @@ export function SymbolsClient() {
                   : "text-muted-foreground hover:bg-muted"
               )}
             >
-              {cat.icon && <span>{cat.icon} </span>}{cat.name}
+              {cat.icon && <span>{cat.icon} </span>}
+              {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
             </button>
           ))}
         </div>

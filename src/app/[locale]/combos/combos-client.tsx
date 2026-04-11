@@ -94,7 +94,7 @@ export function CombosClient() {
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             )}
           >
-            {cat.icon} {cat.name}
+            {cat.icon} {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
           </button>
         ))}
       </div>
@@ -103,7 +103,7 @@ export function CombosClient() {
       {filteredCategories.map((cat) => (
         <div key={cat.id}>
           <h2 className="text-lg font-semibold mb-3">
-            {cat.icon} {cat.name}
+            {cat.icon} {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
             {cat.combos.map((combo, idx) => (

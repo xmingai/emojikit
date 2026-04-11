@@ -93,7 +93,7 @@ export function AsciiArtClient() {
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             )}
           >
-            {cat.category}
+            {dict.categories?.[cat.category as keyof typeof dict.categories] || cat.category}
           </button>
         ))}
       </div>
@@ -108,7 +108,7 @@ export function AsciiArtClient() {
                 className="w-full group flex flex-col p-4 rounded-xl border border-border/50 hover:border-border hover:bg-muted/50 transition-all cursor-pointer text-left relative overflow-hidden"
               >
                 <div className="flex justify-between items-start mb-2 w-full">
-                  <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">{cat.category}</span>
+                  <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">{dict.categories?.[cat.category as keyof typeof dict.categories] || cat.category}</span>
                   <Copy className="h-3.5 w-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <pre 

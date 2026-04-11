@@ -39,7 +39,7 @@ export function CategoryTabs({ categories, activeCategory, onSelect }: CategoryT
             )}
           >
             <span className="mr-1">{cat.icon}</span>
-            {cat.name}
+            {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
           </button>
         ))}
       </div>

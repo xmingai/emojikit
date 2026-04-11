@@ -92,7 +92,7 @@ export function KaomojiClient() {
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             )}
           >
-            {cat.icon} {cat.name}
+            {cat.icon} {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
           </button>
         ))}
       </div>
@@ -101,7 +101,7 @@ export function KaomojiClient() {
       {filteredCategories.map((cat) => (
         <div key={cat.id}>
           <h2 className="text-lg font-semibold mb-3">
-            {cat.icon} {cat.name}
+            {cat.icon} {dict.categories?.[cat.name as keyof typeof dict.categories] || cat.name}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
             {cat.kaomojis.map((k, i) => (
