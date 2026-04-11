@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllEmojis, getBaseEmojis, getCategories, getEmojiVersions } from "@/lib/emoji";
 import { EmojiGrid } from "@/components/emoji-grid";
+import { FAQSection } from "@/components/faq-section";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 
@@ -32,6 +33,9 @@ export default async function EmojiPage({
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <EmojiGrid emojis={baseEmojis} allEmojis={allEmojis} categories={categories} versions={versions} />
+      {dict.emoji.faq && dict.emoji.faq.length > 0 && (
+        <FAQSection title={dict.emoji.faqTitle as string} faqs={dict.emoji.faq as any} />
+      )}
     </div>
   );
 }

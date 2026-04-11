@@ -90,7 +90,22 @@
     "allEmojis": "All Emojis",
     "copyEmoji": "Copy Emoji",
     "copied": "Copied!",
-    "meaning": "Meaning & Description"
+    "meaning": "Meaning & Description",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "How do I copy these emojis?",
+        "a": "Simply click on any emoji you like, and it will be instantly copied to your clipboard. You can then paste it anywhere!"
+      },
+      {
+        "q": "Do these emojis work on all devices?",
+        "a": "Yes, our emojis use standard Unicode 16.0 characters, which are supported across iOS, Android, Windows, macOS, and most major social platforms."
+      },
+      {
+        "q": "How do I search for a specific emoji?",
+        "a": "Use the search bar at the top of the emoji list to find exactly what you are looking for using keywords or shortcodes."
+      }
+    ]
   },
   "symbols": {
     "title": "Special Symbols & Characters",
@@ -98,13 +113,43 @@
     "metaDesc": "Copy and paste 1,800+ special symbols including arrows, stars, math symbols, and more.",
     "clickToCopy": "Click to copy any symbol to clipboard.",
     "searchPlaceholder": "Search symbols... (e.g. arrow, heart, star)",
-    "noResults": "No symbols found"
+    "noResults": "No symbols found",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "What are special symbols?",
+        "a": "Special symbols are Unicode characters like stars (★), arrows (→), and math operators (∑) that are not typically found on a standard keyboard."
+      },
+      {
+        "q": "Can I use these symbols in my bio or username?",
+        "a": "Absolutely! These special text symbols are perfect for decorating your Instagram bio, Twitter name, Discord status, or in-game nicknames."
+      },
+      {
+        "q": "Are these symbols images or text?",
+        "a": "They are 100% plain text characters. This means you can copy and paste them into any text field, document, or messaging app."
+      }
+    ]
   },
   "fancyText": {
     "title": "Fancy Text Generator",
     "metaTitle": "Fancy Text Generator — 20+ Cool Font Styles",
     "metaDesc": "Transform your text into fancy fonts. 20+ styles including cursive, bold, italic, and more.",
-    "inputPlaceholder": "Type your text here..."
+    "inputPlaceholder": "Type your text here...",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "How does the fancy text generator work?",
+        "a": "It converts your normal text into mathematical alphanumeric symbols that look like different fonts (such as cursive or gothic), but are actually just special Unicode characters."
+      },
+      {
+        "q": "Can I use fancy text on Instagram?",
+        "a": "Yes! Many Instagram users use our fancy text tool to make their bio stand out using bold, italic, or cursive text."
+      },
+      {
+        "q": "Is the generated text readable by screen readers?",
+        "a": "While most modern screen readers can interpret standard unicode characters, heavy use of mathematical fancy text might be difficult for accessibility. Use it creatively but sparingly."
+      }
+    ]
   },
   "combos": {
     "title": "Emoji Combos",
@@ -112,7 +157,22 @@
     "metaDesc": "Browse and copy 1,100+ emoji combos for your bio, posts, and messages.",
     "clickToCopy": "Click to copy any combo.",
     "searchPlaceholder": "Search combos... (e.g. love, party, aesthetic)",
-    "noResults": "No combos found for"
+    "noResults": "No combos found for",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "What is an emoji combo?",
+        "a": "An emoji combo is a creative combination of multiple standard emojis to convey a specific aesthetic, mood, or idea (like 🎀🌷🫧 for coquette)."
+      },
+      {
+        "q": "Where can I use emoji combinations?",
+        "a": "Emoji combos are incredibly popular on TikTok, Instagram captions, Twitter, and personal blogs to create a distinct visual vibe."
+      },
+      {
+        "q": "Can I copy the entire combo at once?",
+        "a": "Yes, clicking the copy button next to any combo will instantly copy the entire sequence of emojis to your clipboard."
+      }
+    ]
   },
   "kaomoji": {
     "title": "Kaomoji & Japanese Emoticons",
@@ -120,7 +180,22 @@
     "metaDesc": "Browse and copy 2,000+ kaomoji and Japanese-style emoticons.",
     "clickToCopy": "Click to copy any kaomoji.",
     "searchPlaceholder": "Search kaomoji... (e.g. smile, sad, table flip)",
-    "noResults": "No kaomoji found for"
+    "noResults": "No kaomoji found for",
+    "faqTitle": "FAQ: frequently asked questions",
+    "faq": [
+      {
+        "q": "What is Kaomoji?",
+        "a": "Kaomoji (顔文字) is a popular Japanese emoticon style made up of Japanese characters and grammar punctuations, used to express emotion in texting and cyber communication."
+      },
+      {
+        "q": "What is the difference between Kaomoji and Emojis?",
+        "a": "Emojis are graphic symbols and pictures, whereas Kaomoji are text-based ascii art faces that you don't need a special keyboard to type if you copy them here."
+      },
+      {
+        "q": "Do Kaomoji work on Discord and Reddit?",
+        "a": "Yes, since they are standard text characters, they render perfectly on almost all modern forums, games, and messaging platforms."
+      }
+    ]
   },
   "dividers": {
     "title": "Text Dividers & Line Art"

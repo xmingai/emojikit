@@ -90,7 +90,22 @@
     "allEmojis": "Todos los Emojis",
     "copyEmoji": "Copiar Emoji",
     "copied": "¡Copiado!",
-    "meaning": "Significado y Descripción"
+    "meaning": "Significado y Descripción",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Cómo copio estos emojis?",
+        "a": "Simplemente haz clic en el emoji que te guste y se copiará instantáneamente en tu portapapeles. ¡Luego pégalo donde quieras!"
+      },
+      {
+        "q": "¿Estos emojis funcionan en todos los dispositivos?",
+        "a": "Sí, nuestros emojis utilizan caracteres Unicode 16.0 estándar, soportados en iOS, Android, Windows, macOS y plataformas móviles."
+      },
+      {
+        "q": "¿Qué hago si veo cuadritos vacíos?",
+        "a": "Si ves un cuadrado en lugar de un emoji, significa que el software de tu dispositivo está desactualizado y necesita descargar la nueva fuente."
+      }
+    ]
   },
   "symbols": {
     "title": "Símbolos Especiales y Caracteres",
@@ -98,13 +113,43 @@
     "metaDesc": "Copia y pega 1,800+ símbolos especiales incluyendo flechas, estrellas, símbolos matemáticos y más.",
     "clickToCopy": "Haz clic en cualquier símbolo para copiarlo.",
     "searchPlaceholder": "Buscar símbolos... (ej. flecha, corazón, estrella)",
-    "noResults": "No se encontraron símbolos"
+    "noResults": "No se encontraron símbolos",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Qué son estos símbolos especiales?",
+        "a": "Son caracteres Unicode como estrellas (★) o flechas (→) que normalmente no tienes en tu teclado físico."
+      },
+      {
+        "q": "¿Puedo usarlos para mi biografía de Instagram o juegos?",
+        "a": "¡Totalmente! Estos símbolos de texto son excepcionales para decorar nombres de usuario en Free Fire, Roblox, y biografías de redes sociales."
+      },
+      {
+        "q": "¿Son imágenes?",
+        "a": "No, son caracteres 100% de texto. Esto significa que puedes copiarlos y pegarlos directamente como texto plano donde quieras."
+      }
+    ]
   },
   "fancyText": {
     "title": "Generador de Texto Elegante",
     "metaTitle": "Generador de Texto Elegante — 20+ Estilos de Fuente",
     "metaDesc": "Transforma tu texto en fuentes elegantes. 20+ estilos incluyendo cursiva, negrita, itálica y más.",
-    "inputPlaceholder": "Escribe tu texto aquí..."
+    "inputPlaceholder": "Escribe tu texto aquí...",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Cómo funciona este generador de texto elegante?",
+        "a": "Convierte tu texto normal en símbolos alfanuméricos matemáticos o antiguos que lucen como fuentes tipográficas diferentes (gótica, cursiva, negrita)."
+      },
+      {
+        "q": "¿Puedo poner esto en Facebook o Twitter?",
+        "a": "¡Sí! Muchos usuarios lo utilizan para hacer que su nombre de perfil de Facebook o sus tuits llamen más la atención."
+      },
+      {
+        "q": "¿Solo funciona con letras en inglés?",
+        "a": "Principalmente sí. La transformación de letras con estilo solo está disponible en la norma Unicode para el alfabeto y los números, no para caracteres con tilde o acentos marcados."
+      }
+    ]
   },
   "combos": {
     "title": "Combos de Emojis",
@@ -112,7 +157,22 @@
     "metaDesc": "Explora y copia 1,100+ combos de emojis para tu bio, publicaciones y mensajes.",
     "clickToCopy": "Haz clic para copiar cualquier combo.",
     "searchPlaceholder": "Buscar combos... (ej. amor, fiesta)",
-    "noResults": "No se encontraron combos para"
+    "noResults": "No se encontraron combos para",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Qué es un combo de emojis?",
+        "a": "Un combo es una combinación creativa de múltiples emojis que juntos transmiten una estética, estado de ánimo o idea particular (como estilo aesthetic)."
+      },
+      {
+        "q": "¿Dónde puedo publicar estas combinaciones?",
+        "a": "Son sumamente populares en los pies de foto de Instagram, biografías de Twitter y videos de TikTok para destacar del resto."
+      },
+      {
+        "q": "¿Se copia todo de una vez?",
+        "a": "Sí, cada botón que presiones copiará la secuencia completa de emojis directamente a tu portapapeles con un solo toque."
+      }
+    ]
   },
   "kaomoji": {
     "title": "Kaomoji y Emoticonos Japoneses",
@@ -120,7 +180,22 @@
     "metaDesc": "Explora y copia 2,000+ kaomojis y emoticonos de estilo japonés.",
     "clickToCopy": "Haz clic para copiar cualquier kaomoji.",
     "searchPlaceholder": "Buscar kaomoji... (ej. sonrisa, triste)",
-    "noResults": "No se encontraron kaomoji para"
+    "noResults": "No se encontraron kaomoji para",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq": [
+      {
+        "q": "¿Qué significa Kaomoji?",
+        "a": "El Kaomoji es un popular estilo de emoticón japonés creado al combinar signos de puntuación de diferentes idiomas, usado ampliamente en internet."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre Kaomoji y Emojis?",
+        "a": "Los emojis son gráficos y coloridos, mientras que los kaomojis están basados exclusivamente en texto y símbolos ASCII (como el clásico de voltear mesas)."
+      },
+      {
+        "q": "¿Se mostrarán en Discord o WhatsApp?",
+        "a": "Sí, ya que son texto puro, se renderizarán de forma idéntica en casi todos los juegos, foros y plataformas de mensajería."
+      }
+    ]
   },
   "dividers": {
     "title": "Divisores de Texto y Arte Lineal"

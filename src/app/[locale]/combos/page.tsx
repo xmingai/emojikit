@@ -1,16 +1,36 @@
 import type { Metadata } from "next";
 import { CombosClient } from "./combos-client";
+import { getDictionary } from "@/i18n/dictionaries";
+import { type Locale } from "@/i18n/config";
+import { FAQSection } from "@/components/faq-section";
 
-export const metadata: Metadata = {
-  title: "Emoji Combos & Kaomoji — Copy & Paste Combinations",
-  description:
-    "Browse 100+ curated emoji combinations, aesthetic combos, and kaomoji text faces. Perfect for Instagram, TikTok, and Discord. Copy & paste instantly.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  return {
+    title: dict.combos.metaTitle || dict.combos.title,
+    description: dict.combos.metaDesc,
+  };
+}
 
-export default function CombosPage() {
+export default async function CombosPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <CombosClient />
+      {dict.combos.faq && dict.combos.faq.length > 0 && (
+        <FAQSection title={dict.combos.faqTitle as string} faqs={dict.combos.faq as any} />
+      )}
     </div>
   );
 }
