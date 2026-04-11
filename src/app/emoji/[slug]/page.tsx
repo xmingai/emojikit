@@ -78,7 +78,7 @@ export default async function EmojiDetailPage({ params }: Props) {
         </InfoBlock>
 
         <InfoBlock title="Shortcode">
-          <code className="text-sm font-mono bg-muted px-2 py-0.5 rounded">
+          <code className="text-sm font-mono bg-muted px-2 py-0.5 rounded break-all inline-block">
             :{emoji.slug.replace(/-/g, "_")}:
           </code>
         </InfoBlock>
@@ -165,7 +165,7 @@ export default async function EmojiDetailPage({ params }: Props) {
 
 function InfoBlock({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div>
+    <div className="min-w-0">
       <p className="text-xs font-medium text-muted-foreground mb-1">{title}</p>
       {children}
     </div>
