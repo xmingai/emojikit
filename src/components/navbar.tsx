@@ -78,8 +78,8 @@ export function Navbar() {
         <Tooltip>
           <TooltipTrigger className="cursor-pointer" render={<div />}>
             <Link href={prefix || "/"} className="flex items-center gap-3 font-semibold text-xl tracking-tight">
-              <Image src="/logo.png" alt="EmojiKit Logo" width={44} height={44} className="rounded-md" />
-              <span>EmojiKit</span>
+              <Image src="/logo.png" alt="MojiCap Logo" width={44} height={44} className="rounded-md" />
+              <span>MojiCap</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent side="bottom" sideOffset={14}>

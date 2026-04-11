@@ -18,8 +18,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           <div className="flex flex-col gap-3 max-w-xs">
             <div className="flex items-center gap-2.5">
-              <Image src="/logo.png" alt="EmojiKit Logo" width={32} height={32} className="rounded-sm opacity-80" />
-              <span className="font-semibold text-lg text-foreground">EmojiKit</span>
+              <Image src="/logo.png" alt="MojiCap Logo" width={32} height={32} className="rounded-sm opacity-80" />
+              <span className="font-semibold text-lg text-foreground">MojiCap</span>
             </div>
             <p className="text-sm text-muted-foreground">{t.description}</p>
           </div>

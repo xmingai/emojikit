@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EmojiKit — 表情符号、特殊符号 & 花体文字 一键复制",
+    "title": "MojiCap — 表情符号、特殊符号 & 花体文字 一键复制",
     "description": "全网最快最美的 Emoji 工具。一键复制粘贴表情符号、特殊符号、花体文字和 Emoji 组合。"
   },
   "nav": {
@@ -120,7 +120,7 @@
     "invisibleCharacters": "隐形字符",
     "brailleTranslator": "盲文翻译器",
     "asciiArt": "ASCII 字符画",
-    "copyright": "© {year} EmojiKit. 所有表情符号版权归其各自所有者所有。",
+    "copyright": "© {year} MojiCap. 所有表情符号版权归其各自所有者所有。",
     "privacy": "隐私政策",
     "terms": "使用条款"
   },

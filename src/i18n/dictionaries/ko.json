@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EmojiKit — 이모지, 특수문자 & 꾸미기 글꼴 복사 붙여넣기",
+    "title": "MojiCap — 이모지, 특수문자 & 꾸미기 글꼴 복사 붙여넣기",
     "description": "웹에서 가장 빠르고 아름다운 이모지 도구. 이모지, 특수문자, 꾸미기 글꼴, 이모지 조합을 즉시 복사 붙여넣기."
   },
   "nav": {
@@ -120,7 +120,7 @@
     "invisibleCharacters": "투명 문자",
     "brailleTranslator": "점자 변환기",
     "asciiArt": "아스키 아트",
-    "copyright": "© {year} EmojiKit. 모든 이모지의 저작권은 각 소유자에게 있습니다.",
+    "copyright": "© {year} MojiCap. 모든 이모지의 저작권은 각 소유자에게 있습니다.",
     "privacy": "개인정보",
     "terms": "이용약관"
   },

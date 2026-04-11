@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EmojiKit — 絵文字・記号 & おしゃれフォント コピペ",
+    "title": "MojiCap — 絵文字・記号 & おしゃれフォント コピペ",
     "description": "ウェブ上で最速・最美の絵文字ツール。絵文字、特殊記号、おしゃれフォント、絵文字コンボを瞬時にコピー＆ペースト。"
   },
   "nav": {
@@ -120,7 +120,7 @@
     "invisibleCharacters": "透明文字",
     "brailleTranslator": "点字変換",
     "asciiArt": "AAアート",
-    "copyright": "© {year} EmojiKit. すべての絵文字の著作権はそれぞれの所有者に帰属します。",
+    "copyright": "© {year} MojiCap. すべての絵文字の著作権はそれぞれの所有者に帰属します。",
     "privacy": "プライバシー",
     "terms": "利用規約"
   },

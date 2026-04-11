@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EmojiKit — Copiar y Pegar Emojis, Símbolos y Texto Elegante",
+    "title": "MojiCap — Copiar y Pegar Emojis, Símbolos y Texto Elegante",
     "description": "La herramienta de emojis más rápida y bonita de la web. Copia y pega emojis, símbolos especiales, texto elegante y combinaciones de emojis al instante."
   },
   "nav": {
@@ -126,7 +126,7 @@
     "invisibleCharacters": "Caracteres Invisibles",
     "brailleTranslator": "Traductor Braille",
     "asciiArt": "Arte ASCII",
-    "copyright": "© {year} EmojiKit. Todos los derechos de autor de los emojis pertenecen a sus respectivos propietarios.",
+    "copyright": "© {year} MojiCap. Todos los derechos de autor de los emojis pertenecen a sus respectivos propietarios.",
     "privacy": "Privacidad",
     "terms": "Términos"
   },

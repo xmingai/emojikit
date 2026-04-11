@@ -32,7 +32,7 @@ export async function generateMetadata({
   return {
     title: {
       default: dict.meta.title,
-      template: "%s | EmojiKit",
+      template: "%s | MojiCap",
     },
     description: dict.meta.description,
     keywords: [
@@ -50,7 +50,7 @@ export async function generateMetadata({
       description: dict.meta.description,
       type: "website",
       locale: locale,
-      siteName: "EmojiKit",
+      siteName: "MojiCap",
     },
     twitter: {
       card: "summary_large_image",

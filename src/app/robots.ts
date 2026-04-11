@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://emojikit.com/sitemap.xml",
+    sitemap: "https://mojicap.com/sitemap.xml",
   };
 }

@@ -1,4 +1,4 @@
-# EmojiKit
+# MojiCap
 
 The fastest emoji, symbols, and fancy text tool on the web.
 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const STORAGE_KEY = "emojikit-favorites";
+const STORAGE_KEY = "mojicap-favorites";
 
 export function useFavorites() {
   const [favorites, setFavorites] = useState<string[]>([]);

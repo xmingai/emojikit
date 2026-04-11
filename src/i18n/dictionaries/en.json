@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EmojiKit — Copy & Paste Emojis, Symbols & Fancy Text",
+    "title": "MojiCap — Copy & Paste Emojis, Symbols & Fancy Text",
     "description": "The fastest and most beautiful emoji tool on the web. Copy and paste emojis, special symbols, fancy text, and emoji combos instantly."
   },
   "nav": {
@@ -120,7 +120,7 @@
     "invisibleCharacters": "Invisible Characters",
     "brailleTranslator": "Braille Translator",
     "asciiArt": "ASCII Art",
-    "copyright": "© {year} EmojiKit. All emoji copyrights belong to their respective owners.",
+    "copyright": "© {year} MojiCap. All emoji copyrights belong to their respective owners.",
     "privacy": "Privacy",
     "terms": "Terms"
   },

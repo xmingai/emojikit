@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const STORAGE_KEY = "emojikit-recent";
+const STORAGE_KEY = "mojicap-recent";
 const MAX_RECENT = 50;
 
 export function useRecent() {

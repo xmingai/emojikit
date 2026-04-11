@@ -1,4 +1,4 @@
-# EmojiKit 部署指南
+# MojiCap 部署指南
 
 ## 线上地址
 
