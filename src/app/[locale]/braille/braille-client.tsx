@@ -31,18 +31,18 @@ export function BrailleClient() {
         value={text}
         onChange={(e) => setText(e.target.value)}
         className="w-full min-h-[120px] p-4 rounded-xl border bg-background text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring resize-y"
-        placeholder="Type something here..."
+        placeholder={dict.braille.inputPlaceholder}
       />
 
       <div className="space-y-4">
         <div className="p-5 rounded-xl border border-border/50 bg-card">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-lg">Braille</h2>
+            <h2 className="font-semibold text-lg">{dict.braille.braille}</h2>
             <button
               onClick={() => copyToClipboard(braille, "Braille text")}
               className="px-3 py-1.5 text-xs font-medium bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors flex items-center gap-1.5"
             >
-              <Copy className="h-3.5 w-3.5" /> Copy
+              <Copy className="h-3.5 w-3.5" /> {dict.common.copy}
             </button>
           </div>
           <p className="tracking-[0.2em] break-all min-h-[60px]" style={{ fontSize: `${currentSize.value}px` }}>
@@ -52,12 +52,12 @@ export function BrailleClient() {
 
         <div className="p-5 rounded-xl border border-border/50 bg-card">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-lg">Morse Code</h2>
+            <h2 className="font-semibold text-lg">{dict.braille.morseCode}</h2>
             <button
               onClick={() => copyToClipboard(morse, "Morse code")}
               className="px-3 py-1.5 text-xs font-medium bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors flex items-center gap-1.5"
             >
-              <Copy className="h-3.5 w-3.5" /> Copy
+              <Copy className="h-3.5 w-3.5" /> {dict.common.copy}
             </button>
           </div>
           <p className="tracking-widest break-all font-mono min-h-[60px]" style={{ fontSize: `${currentSize.value}px` }}>

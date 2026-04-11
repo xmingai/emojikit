@@ -59,7 +59,7 @@ export function KaomojiClient() {
           setSearchQuery(v);
           if (v) setActiveCategory(null);
         }}
-        placeholder="Search kaomoji... (e.g. smile, sad, table flip)"
+        placeholder={dict.kaomoji.searchPlaceholder}
       />
 
       {/* Category filter */}
@@ -76,7 +76,7 @@ export function KaomojiClient() {
               : "text-muted-foreground hover:text-foreground hover:bg-muted"
           )}
         >
-          All
+          {dict.common.all}
         </button>
         {categories.map((cat) => (
           <button
@@ -120,7 +120,7 @@ export function KaomojiClient() {
       {filteredCategories.length === 0 && (
         <div className="text-center py-16 text-muted-foreground">
           <p className="text-4xl mb-3">🔍</p>
-          <p className="text-sm">No kaomoji found for &quot;{searchQuery}&quot;</p>
+          <p className="text-sm">{dict.kaomoji.noResults} &quot;{searchQuery}&quot;</p>
         </div>
       )}
     </div>

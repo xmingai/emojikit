@@ -60,7 +60,7 @@ export function AsciiArtClient() {
           setSearchQuery(v);
           if (v) setActiveCategory(null);
         }}
-        placeholder="Search ascii art... (e.g. weapons, bear, multi-line)"
+        placeholder={dict.asciiArt.searchPlaceholder}
       />
 
       {/* Category filter */}
@@ -77,7 +77,7 @@ export function AsciiArtClient() {
               : "text-muted-foreground hover:text-foreground hover:bg-muted"
           )}
         >
-          All
+          {dict.common.all}
         </button>
         {categories.map((cat) => (
           <button
@@ -126,7 +126,7 @@ export function AsciiArtClient() {
       {filteredCategories.length === 0 && (
         <div className="text-center py-16 text-muted-foreground">
           <p className="text-4xl mb-3">🔍</p>
-          <p className="text-sm">No ASCII art found for &quot;{searchQuery}&quot;</p>
+          <p className="text-sm">{dict.asciiArt.noResults} &quot;{searchQuery}&quot;</p>
         </div>
       )}
     </div>

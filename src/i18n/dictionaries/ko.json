@@ -81,38 +81,49 @@
     "metaTitle": "특수문자 — 1,800+ 유니코드 기호 복사 붙여넣기",
     "metaDesc": "화살표, 별, 수학 기호 등 1,800+ 특수문자를 복사 붙여넣기.",
     "clickToCopy": "기호를 클릭하면 복사됩니다.",
-    "searchPlaceholder": "기호 검색..."
+    "searchPlaceholder": "기호 검색... (예: 화살표, 하트, 별)",
+    "noResults": "기호를 찾을 수 없습니다"
   },
   "fancyText": {
     "title": "꾸미기 글꼴 생성기",
     "metaTitle": "꾸미기 글꼴 — 20+ 쿨한 글꼴 스타일",
-    "metaDesc": "텍스트를 꾸미기 글꼴로 변환. 필기체, 굵게, 기울임 등 20+ 스타일."
+    "metaDesc": "텍스트를 꾸미기 글꼴로 변환. 필기체, 굵게, 기울임 등 20+ 스타일.",
+    "inputPlaceholder": "여기에 텍스트를 입력..."
   },
   "combos": {
     "title": "이모지 조합",
     "metaTitle": "이모지 조합 — 1,100+ 복사 붙여넣기 조합",
     "metaDesc": "프로필, 게시물, 메시지용 1,100+ 이모지 조합을 탐색하고 복사하세요.",
     "clickToCopy": "클릭하여 조합 복사.",
-    "searchPlaceholder": "조합 검색..."
+    "searchPlaceholder": "콤보 검색... (예: 사랑, 파티)",
+    "noResults": "콤보를 찾을 수 없습니다"
   },
   "kaomoji": {
     "title": "이모티콘 & 카오모지",
     "metaTitle": "이모티콘 — 2,000+ 카오모지 복사 붙여넣기",
     "metaDesc": "2,000+ 카오모지와 일본식 이모티콘을 탐색하고 복사하세요.",
     "clickToCopy": "클릭하여 이모티콘 복사.",
-    "searchPlaceholder": "이모티콘 검색..."
+    "searchPlaceholder": "이모티콘 검색... (예: 웃음, 슬픔)",
+    "noResults": "이모티콘을 찾을 수 없습니다"
   },
   "dividers": {
     "title": "텍스트 구분선 & 라인 아트"
   },
   "invisible": {
-    "title": "투명 문자"
+    "title": "투명 문자",
+    "testArea": "테스트 영역",
+    "testAreaDesc": "아래 괄호 사이에 보이지 않는 문자를 붙여넣어 너비를 테스트하세요."
   },
   "braille": {
-    "title": "점자 변환기"
+    "title": "점자 변환기",
+    "braille": "점자",
+    "morseCode": "모스 부호",
+    "inputPlaceholder": "여기에 텍스트를 입력..."
   },
   "asciiArt": {
-    "title": "아스키 아트"
+    "title": "아스키 아트",
+    "searchPlaceholder": "ASCII 아트 검색... (예: 무기, 곰)",
+    "noResults": "ASCII 아트를 찾을 수 없습니다"
   },
   "footer": {
     "description": "웹에서 가장 빠르고 아름다운 이모지 도구. 이모지, 특수문자, 텍스트 아트를 즉시 복사.",
@@ -135,6 +146,15 @@
     "copied": "{text} 복사됨",
     "copyToClipboard": "클립보드에 복사",
     "search": "검색",
-    "all": "전체"
+    "all": "전체",
+    "copy": "복사",
+    "details": "상세",
+    "results": "결과",
+    "resultsFor": "\"{query}\"에 대한 {count}개의 결과",
+    "noResults": "\"{query}\"에 대한 결과를 찾을 수 없습니다",
+    "clickToCopy": "클릭하여 복사",
+    "typeHere": "여기에 텍스트를 입력...",
+    "pasteHere": "여기에 붙여넣기...",
+    "worksOn": "호환:"
   }
 }

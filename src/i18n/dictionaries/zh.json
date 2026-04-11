@@ -81,38 +81,49 @@
     "metaTitle": "特殊符号 — 复制粘贴 1,800+ Unicode 符号",
     "metaDesc": "复制粘贴 1,800+ 个特殊符号，包括箭头、星星、数学符号等。",
     "clickToCopy": "点击任意符号即可复制。",
-    "searchPlaceholder": "搜索符号..."
+    "searchPlaceholder": "搜索符号...（如箭头、爱心、星星）",
+    "noResults": "未找到符号"
   },
   "fancyText": {
     "title": "花体文字生成器",
     "metaTitle": "花体文字生成器 — 20+ 种酷炫字体风格",
-    "metaDesc": "将文字转换为花体字。提供 20+ 种风格，包括手写体、粗体、斜体等。"
+    "metaDesc": "将文字转换为花体字。提供 20+ 种风格，包括手写体、粗体、斜体等。",
+    "inputPlaceholder": "在此输入文字..."
   },
   "combos": {
     "title": "Emoji 组合",
     "metaTitle": "Emoji 组合 — 1,100+ 种一键复制",
     "metaDesc": "浏览并复制 1,100+ 种 Emoji 组合，适用于个签、朋友圈和消息。",
     "clickToCopy": "点击即可复制组合。",
-    "searchPlaceholder": "搜索组合..."
+    "searchPlaceholder": "搜索组合...（如爱情、派对、美学）",
+    "noResults": "未找到相关组合"
   },
   "kaomoji": {
     "title": "颜文字 & 日式表情",
     "metaTitle": "颜文字 — 2,000+ 个日式表情一键复制",
     "metaDesc": "浏览并复制 2,000+ 个颜文字和日式表情符号。",
     "clickToCopy": "点击即可复制颜文字。",
-    "searchPlaceholder": "搜索颜文字..."
+    "searchPlaceholder": "搜索颜文字...（如微笑、悲伤、掀桌）",
+    "noResults": "未找到相关颜文字"
   },
   "dividers": {
     "title": "文字分割线 & 线条艺术"
   },
   "invisible": {
-    "title": "隐形字符"
+    "title": "隐形字符",
+    "testArea": "测试区域",
+    "testAreaDesc": "在下方括号中粘贴不可见字符以测试其宽度。"
   },
   "braille": {
-    "title": "盲文翻译器"
+    "title": "盲文翻译器",
+    "braille": "盲文",
+    "morseCode": "摩尔斯电码",
+    "inputPlaceholder": "在此输入文字..."
   },
   "asciiArt": {
-    "title": "ASCII 字符画"
+    "title": "ASCII 字符画",
+    "searchPlaceholder": "搜索 ASCII 艺术...（如武器、小熊、多行）",
+    "noResults": "未找到相关 ASCII 艺术"
   },
   "footer": {
     "description": "全网最快最美的 Emoji 工具。一键复制表情符号、特殊符号和字符画。",
@@ -135,6 +146,15 @@
     "copied": "已复制 {text}",
     "copyToClipboard": "复制到剪贴板",
     "search": "搜索",
-    "all": "全部"
+    "all": "全部",
+    "copy": "复制",
+    "details": "详情",
+    "results": "结果",
+    "resultsFor": "{count} 个关于 \"{query}\" 的结果",
+    "noResults": "未找到 \"{query}\" 相关结果",
+    "clickToCopy": "点击复制",
+    "typeHere": "在此输入文字...",
+    "pasteHere": "在此处粘贴...",
+    "worksOn": "兼容平台："
   }
 }

@@ -81,38 +81,49 @@
     "metaTitle": "Símbolos Especiales — Copiar y Pegar 1,800+ Símbolos Unicode",
     "metaDesc": "Copia y pega 1,800+ símbolos especiales incluyendo flechas, estrellas, símbolos matemáticos y más.",
     "clickToCopy": "Haz clic en cualquier símbolo para copiarlo.",
-    "searchPlaceholder": "Buscar símbolos..."
+    "searchPlaceholder": "Buscar símbolos... (ej. flecha, corazón, estrella)",
+    "noResults": "No se encontraron símbolos"
   },
   "fancyText": {
     "title": "Generador de Texto Elegante",
     "metaTitle": "Generador de Texto Elegante — 20+ Estilos de Fuente",
-    "metaDesc": "Transforma tu texto en fuentes elegantes. 20+ estilos incluyendo cursiva, negrita, itálica y más."
+    "metaDesc": "Transforma tu texto en fuentes elegantes. 20+ estilos incluyendo cursiva, negrita, itálica y más.",
+    "inputPlaceholder": "Escribe tu texto aquí..."
   },
   "combos": {
     "title": "Combos de Emojis",
     "metaTitle": "Combos de Emojis — 1,100+ Combinaciones para Copiar",
     "metaDesc": "Explora y copia 1,100+ combos de emojis para tu bio, publicaciones y mensajes.",
     "clickToCopy": "Haz clic para copiar cualquier combo.",
-    "searchPlaceholder": "Buscar combos..."
+    "searchPlaceholder": "Buscar combos... (ej. amor, fiesta)",
+    "noResults": "No se encontraron combos para"
   },
   "kaomoji": {
     "title": "Kaomoji y Emoticonos Japoneses",
     "metaTitle": "Kaomoji — 2,000+ Emoticonos Japoneses para Copiar",
     "metaDesc": "Explora y copia 2,000+ kaomojis y emoticonos de estilo japonés.",
     "clickToCopy": "Haz clic para copiar cualquier kaomoji.",
-    "searchPlaceholder": "Buscar kaomoji..."
+    "searchPlaceholder": "Buscar kaomoji... (ej. sonrisa, triste)",
+    "noResults": "No se encontraron kaomoji para"
   },
   "dividers": {
     "title": "Divisores de Texto y Arte Lineal"
   },
   "invisible": {
-    "title": "Caracteres Invisibles"
+    "title": "Caracteres Invisibles",
+    "testArea": "Área de prueba",
+    "testAreaDesc": "Pega tu carácter invisible entre los corchetes para probar su ancho."
   },
   "braille": {
-    "title": "Traductor Braille"
+    "title": "Traductor Braille",
+    "braille": "Braille",
+    "morseCode": "Código Morse",
+    "inputPlaceholder": "Escribe algo aquí..."
   },
   "asciiArt": {
-    "title": "Arte ASCII"
+    "title": "Arte ASCII",
+    "searchPlaceholder": "Buscar arte ASCII... (ej. armas, oso)",
+    "noResults": "No se encontró arte ASCII para"
   },
   "footer": {
     "description": "La herramienta de emojis más rápida y bonita de la web. Copia emojis, símbolos y arte textual al instante.",
@@ -135,6 +146,15 @@
     "copied": "{text} copiado",
     "copyToClipboard": "Copiar al portapapeles",
     "search": "Buscar",
-    "all": "Todo"
+    "all": "Todo",
+    "copy": "Copiar",
+    "details": "Detalles",
+    "results": "Resultados",
+    "resultsFor": "{count} resultados para \"{query}\"",
+    "noResults": "No se encontraron resultados para \"{query}\"",
+    "clickToCopy": "Clic para copiar",
+    "typeHere": "Escriba su texto aquí...",
+    "pasteHere": "Pegar aquí...",
+    "worksOn": "Compatible con:"
   }
 }

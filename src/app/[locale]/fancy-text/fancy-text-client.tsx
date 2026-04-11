@@ -32,13 +32,13 @@ export function FancyTextClient() {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type your text here..."
+        placeholder={dict.fancyText.inputPlaceholder}
         className="h-14 text-lg px-4 bg-muted/50 border-border/50"
         autoFocus
       />
 
       <div className="flex items-center justify-between px-1">
-        <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Results</h2>
+        <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">{dict.common.results}</h2>
       </div>
 
       {/* Results */}

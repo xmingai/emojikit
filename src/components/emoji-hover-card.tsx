@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Copy } from "lucide-react";
 import type { Emoji } from "@/lib/emoji";
+import { useDict } from "@/i18n/context";
 import {
   HoverCard,
   HoverCardContent,
@@ -16,6 +17,7 @@ interface EmojiHoverCardProps {
 }
 
 export function EmojiHoverCard({ emoji, onCopy, sizeValue }: EmojiHoverCardProps) {
+  const dict = useDict();
   return (
     <HoverCard>
       <HoverCardTrigger
@@ -58,14 +60,14 @@ export function EmojiHoverCard({ emoji, onCopy, sizeValue }: EmojiHoverCardProps
             }}
           >
             <Copy className="mr-1.5 h-3 w-3" />
-            Copy
+            {dict.common.copy}
           </button>
           <Link 
             href={`/emoji/${emoji.slug}`}
             className="flex-1 inline-flex items-center justify-center h-8 px-3 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
-            Details
+            {dict.common.details}
             <ArrowRight className="ml-1 h-3 w-3" />
           </Link>
         </div>

@@ -61,7 +61,7 @@ export function SymbolsClient() {
       <SearchBar
         value={searchQuery}
         onChange={setSearchQuery}
-        placeholder="Search symbols... (e.g. arrow, heart, star)"
+        placeholder={dict.symbols.searchPlaceholder}
       />
 
       {/* Category sidebar + content */}
@@ -115,7 +115,7 @@ export function SymbolsClient() {
           <div className="flex items-center justify-between mb-3">
             {searchQuery ? (
               <p className="text-xs text-muted-foreground">
-                {displayedSymbols.length} results for &quot;{searchQuery}&quot;
+                {displayedSymbols.length} {dict.common.results.toLowerCase()} &quot;{searchQuery}&quot;
               </p>
             ) : (
               <div /> // Placeholder
@@ -132,7 +132,7 @@ export function SymbolsClient() {
                   {symbol}
                 </TooltipTrigger>
                 <TooltipContent side="top" className="text-xs">
-                  Click to copy
+                  {dict.common.clickToCopy}
                 </TooltipContent>
               </Tooltip>
             ))}
@@ -141,7 +141,7 @@ export function SymbolsClient() {
           {displayedSymbols.length === 0 && (
             <div className="text-center py-16 text-muted-foreground">
               <p className="text-4xl mb-3">🔍</p>
-              <p className="text-sm">No symbols found</p>
+              <p className="text-sm">{dict.symbols.noResults}</p>
             </div>
           )}
         </div>

@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import type { Category } from "@/lib/emoji";
+import { useDict } from "@/i18n/context";
 
 interface CategoryTabsProps {
   categories: Category[];
@@ -11,6 +12,7 @@ interface CategoryTabsProps {
 }
 
 export function CategoryTabs({ categories, activeCategory, onSelect }: CategoryTabsProps) {
+  const dict = useDict();
   return (
     <ScrollArea className="w-full whitespace-nowrap">
       <div className="flex items-center gap-1 pb-2">
@@ -23,7 +25,7 @@ export function CategoryTabs({ categories, activeCategory, onSelect }: CategoryT
               : "text-muted-foreground hover:text-foreground hover:bg-muted"
           )}
         >
-          All
+          {dict.common.all}
         </button>
         {categories.map((cat) => (
           <button

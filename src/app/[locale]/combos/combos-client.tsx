@@ -61,7 +61,7 @@ export function CombosClient() {
           setSearchQuery(v);
           if (v) setActiveCategory(null);
         }}
-        placeholder="Search combos... (e.g. love, party, aesthetic)"
+        placeholder={dict.combos.searchPlaceholder}
       />
 
       {/* Category filter */}
@@ -78,7 +78,7 @@ export function CombosClient() {
               : "text-muted-foreground hover:text-foreground hover:bg-muted"
           )}
         >
-          All
+          {dict.common.all}
         </button>
         {categories.map((cat) => (
           <button
@@ -126,7 +126,7 @@ export function CombosClient() {
       {filteredCategories.length === 0 && (
         <div className="text-center py-16 text-muted-foreground">
           <p className="text-4xl mb-3">🔍</p>
-          <p className="text-sm">No combos found for &quot;{searchQuery}&quot;</p>
+          <p className="text-sm">{dict.combos.noResults} &quot;{searchQuery}&quot;</p>
         </div>
       )}
     </div>

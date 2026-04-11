@@ -81,38 +81,49 @@
     "metaTitle": "特殊記号 — 1,800+ Unicode記号をコピペ",
     "metaDesc": "矢印、星、数学記号など1,800+の特殊記号をコピー＆ペースト。",
     "clickToCopy": "記号をクリックでコピー。",
-    "searchPlaceholder": "記号を検索..."
+    "searchPlaceholder": "記号を検索...（例：矢印、ハート、星）",
+    "noResults": "記号が見つかりません"
   },
   "fancyText": {
     "title": "おしゃれフォント生成",
     "metaTitle": "おしゃれフォント生成 — 20+種類のクールフォント",
-    "metaDesc": "テキストをおしゃれフォントに変換。筆記体、太字、斜体など20+種類。"
+    "metaDesc": "テキストをおしゃれフォントに変換。筆記体、太字、斜体など20+種類。",
+    "inputPlaceholder": "ここにテキストを入力..."
   },
   "combos": {
     "title": "絵文字コンボ",
     "metaTitle": "絵文字コンボ — 1,100+種類のコピペ組み合わせ",
     "metaDesc": "プロフィール、投稿、メッセージ用の1,100+種類の絵文字コンボを閲覧・コピー。",
     "clickToCopy": "クリックでコンボをコピー。",
-    "searchPlaceholder": "コンボを検索..."
+    "searchPlaceholder": "コンボを検索...（例：愛、パーティー）",
+    "noResults": "コンボが見つかりません"
   },
   "kaomoji": {
     "title": "顔文字 & AA",
     "metaTitle": "顔文字 — 2,000+種類の顔文字コピペ",
     "metaDesc": "2,000+種類の顔文字やアスキーアート顔文字を閲覧・コピー。",
     "clickToCopy": "クリックで顔文字をコピー。",
-    "searchPlaceholder": "顔文字を検索..."
+    "searchPlaceholder": "顔文字を検索...（例：笑顔、泣く）",
+    "noResults": "顔文字が見つかりません"
   },
   "dividers": {
     "title": "テキスト区切り線"
   },
   "invisible": {
-    "title": "透明文字"
+    "title": "透明文字",
+    "testArea": "テストエリア",
+    "testAreaDesc": "下のカッコの間に不可視文字を貼り付けて、幅をテストしてください。"
   },
   "braille": {
-    "title": "点字変換ツール"
+    "title": "点字変換ツール",
+    "braille": "点字",
+    "morseCode": "モールス符号",
+    "inputPlaceholder": "ここにテキストを入力..."
   },
   "asciiArt": {
-    "title": "AAアート"
+    "title": "AAアート",
+    "searchPlaceholder": "AAを検索...（例：武器、クマ）",
+    "noResults": "AAが見つかりません"
   },
   "footer": {
     "description": "ウェブ上で最速・最美の絵文字ツール。絵文字、記号、テキストアートを瞬時にコピー。",
@@ -135,6 +146,15 @@
     "copied": "{text} をコピーしました",
     "copyToClipboard": "クリップボードにコピー",
     "search": "検索",
-    "all": "すべて"
+    "all": "すべて",
+    "copy": "コピー",
+    "details": "詳細",
+    "results": "結果",
+    "resultsFor": "「{query}」の結果 {count} 件",
+    "noResults": "「{query}」の結果が見つかりません",
+    "clickToCopy": "クリックでコピー",
+    "typeHere": "ここにテキストを入力...",
+    "pasteHere": "ここに貼り付け...",
+    "worksOn": "対応："
   }
 }

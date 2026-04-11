@@ -30,8 +30,8 @@ export function InvisibleClient() {
 
       {/* Test Area */}
       <div className="p-4 rounded-xl border bg-muted/30 space-y-3">
-        <h2 className="text-sm font-semibold">Test Area</h2>
-        <p className="text-xs text-muted-foreground">Paste your invisible character between the brackets below to test its width.</p>
+        <h2 className="text-sm font-semibold">{dict.invisible.testArea}</h2>
+        <p className="text-xs text-muted-foreground">{dict.invisible.testAreaDesc}</p>
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground font-mono">[</span>
           <input 
@@ -39,7 +39,7 @@ export function InvisibleClient() {
             value={testText}
             onChange={(e) => setTestText(e.target.value)}
             className="flex-1 bg-transparent border-b outline-none text-center"
-            placeholder="Paste here..."
+            placeholder={dict.common.pasteHere}
           />
           <span className="text-muted-foreground font-mono">]</span>
         </div>
@@ -57,7 +57,7 @@ export function InvisibleClient() {
               <p className="text-sm text-muted-foreground leading-relaxed">{char.description}</p>
               
               <div className="pt-2 flex flex-wrap gap-2">
-                <span className="text-xs text-muted-foreground pt-0.5">Works on:</span>
+                <span className="text-xs text-muted-foreground pt-0.5">{dict.common.worksOn}</span>
                 {char.compatibility.map(plat => (
                   <span key={plat} className="px-2.5 py-0.5 rounded-full border bg-muted/50 text-[10px] uppercase font-medium tracking-wider">
                     {plat}
@@ -72,7 +72,7 @@ export function InvisibleClient() {
                 className="w-full sm:w-auto py-2 px-4 rounded-lg bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2"
               >
                 <Copy className="h-3.5 w-3.5" />
-                <span>Copy</span>
+                <span>{dict.common.copy}</span>
               </button>
             </div>
           </div>

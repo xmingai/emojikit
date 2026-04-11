@@ -68,7 +68,7 @@ export function DividersClient() {
               : "text-muted-foreground hover:text-foreground hover:bg-muted"
           )}
         >
-          All
+          {dict.common.all}
         </button>
         {categories.map((cat) => (
           <button
