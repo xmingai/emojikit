@@ -92,7 +92,7 @@ export default function HomePage() {
           <TypewriterText />
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          The fastest emoji, symbols, and fancy text tool on the web. Click to copy.
+          The fastest emoji, symbols, and fancy text tool on the web.
         </p>
       </section>
 

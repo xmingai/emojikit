@@ -41,7 +41,7 @@ export function TypewriterText() {
   return (
     <span className="inline-block min-w-[180px] text-left text-primary">
       {text}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse font-light opacity-70">|</span>
     </span>
   );
 }
